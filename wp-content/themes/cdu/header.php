@@ -4,12 +4,7 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
 		<title>Cloud Down Under</title>
-
-		<!-- ================ /GOOGLE FONT EOC =================== -->
-		<link rel="icon" type="image/x-icon" href="<?php bloginfo('template_url'); ?>/assets/images/favicon.png">
-		<!-- ================ /GOOGLE FONT EOC =================== -->
 		<?php wp_head() ;?>
 		<!-- =================== /WEB CSS EOC ==================== -->
 		<style type="text/css">
