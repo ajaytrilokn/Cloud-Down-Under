@@ -122,7 +122,7 @@ $(document).ready(function() {
         autoplay: false,
         autoplaySpeed: 2000,
         infinite: true,
-        slidesToShow: 5,
+        slidesToShow: 4,
         slidesToScroll: 1,
         // speed: 2000,
         
@@ -131,24 +131,24 @@ $(document).ready(function() {
                 settings: {
                     autoplay: true,
                     autoplaySpeed: 2000,
-                    slidesToShow: 5,
+                    slidesToShow: 3,
                     infinite: true,
                     dots: false
                 }
             }, {
                 breakpoint: 1200,
                 settings: {
-                    slidesToShow: 4,
+                    slidesToShow: 3,
                 }
             }, {
                 breakpoint: 991,
                 settings: {
-                    slidesToShow: 3,
+                    slidesToShow: 2,
                 }
             }, {
                 breakpoint: 480,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 1,
                 }
             }
         ]
@@ -166,9 +166,9 @@ $(document).ready(function() {
         // speed: 2000,
         
         responsive: [{
-                breakpoint: 1400,
+                breakpoint: 1200.98,
                 settings: {
-                    slidesToShow: 3,
+                    slidesToShow: 2,
                     infinite: false,
                     dots: false
                 }

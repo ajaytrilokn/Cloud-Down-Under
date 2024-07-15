@@ -12,7 +12,7 @@ $videoPlay = get_field('video_play_btn_image','option');
 				<div class="banner-wrap  ">
 					<div class="container">
 						<div class="row">
-							<div class="col-md-6 col-sm-12 col-12">	
+							<div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">	
 								<div class="banner-text-wrap ">
 									<div class="banner-text">
 										<?php the_content();?>
@@ -56,7 +56,7 @@ $videoPlay = get_field('video_play_btn_image','option');
 									</div>
 								</div>
 							</div>
-							<div class="col-md-6 col-sm-12 col-12">	
+							<div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">	
 								<div class="banner-sec-video">
 									<div class="banner-v-img">
 										<?php $bannerVimg = get_field('banner_v_image');											  
