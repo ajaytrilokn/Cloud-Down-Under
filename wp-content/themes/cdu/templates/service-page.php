@@ -1,21 +1,39 @@
 <?php
 /*
-Template Name:Home Page
+Template Name:Service Page
 */
 get_header();
 $videoPlay = get_field('video_play_btn_image','option');
 ?>
 
-			<!-- Content Start -->
- 
-			<section class="banner-sec theme-bg-color" >
+            <section class="banner-sec  services-banner theme-bg-color" >
 				<div class="banner-wrap  ">
 					<div class="container">
 						<div class="row">
 							<div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">	
 								<div class="banner-text-wrap ">
 									<div class="banner-text">
-										<?php the_content();?>
+										<div class="banner-links-main">
+											<ul>
+												<li class="banner-links"><a href="#">Home</a></li>
+												<li class="banner-links"><span>/</span></li>
+												<li class="banner-links"><a href="#">Services</a></li>
+												<li class="banner-links"><span>/</span></li>
+												<li class="banner-links active"><a href="#">Build</a></li>
+											</ul>
+										</div>
+										<div class="banner-heading-wrap">
+											<?php echo the_field('banner_heading');?>
+										</div>
+										<div class="service-banner-points-wp">
+											<?php echo the_field('banner_text');?>
+											<p></p>
+											<ul class="banner-point">
+                                                <?php if(have_rows('banner_points')):while(have_rows('banner_points')):the_row();?>
+							                    <li><?php echo get_sub_field('point_text');?></li>	
+                                            <?php endwhile;endif;?>						                    
+							                </ul>
+							            </div>    
 										<div class="banner-rating-main">
 											<div class="banner-rating">
 												<div class="b_rating_text d-flex align-items-center">
@@ -48,22 +66,18 @@ $videoPlay = get_field('video_play_btn_image','option');
 									</div>
 									<div class="banner-btn-main d-flex flex-wrap">
 										<div class="btn-wp">
-				                        	<a href="<?php echo the_field('discuss_project_btn_url','option');?>" class="btn btn-with-arrow me-3 mb-3"><?php echo the_field('discuss_project_btn','option');?></a>
+				                        	<a href="<?php echo the_field('consultation_url');?>" class="btn btn-with-arrow me-3 mb-3"><?php echo the_field('consultation_btn');?></a>
 				                        </div>
 				                        <div class="btn-wp">	
-											<a href="<?php echo the_field('apply_now_btn_url','option');?>" class="btn btn-with-arrow border-btn me-3 mb-3"><?php echo the_field('apply_now_btn','option');?></a>
+											<a href="<?php echo the_field('view_portfolio_url');?>" class="btn btn-with-arrow border-btn me-3 mb-3"><?php echo the_field('view_portfolio_btn');?></a>
 				                        </div>
 									</div>
 								</div>
 							</div>
-							<div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">	
-								<div class="banner-sec-video">
-									<div class="banner-v-img">
-										<?php $bannerVimg = get_field('banner_v_image');											  
-										?>
-										<img src="<?php echo $bannerVimg['url'];?>" alt="<?php echo $bannerVimg['alt'];?>">
-										<a href="<?php echo the_field('banner_play_btn_url');?>" data-fancybox class="play-link" ><img src="<?php echo $videoPlay['url'];?>" alt="<?php echo $videoPlay['alt'];?>"></a>
-									</div>
+							<div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12 align-self-center">	
+								<div class="banner-v-img">
+                                    <?php $serviceBannerimg = get_field('service_banner_image');?>
+									<img src="<?php echo $serviceBannerimg['url'];?>" alt="<?php echo $serviceBannerimg['alt'];?>">
 								</div>
 							</div>
 						</div>	
@@ -71,22 +85,12 @@ $videoPlay = get_field('video_play_btn_image','option');
 				</div>
 			</section>
 
-			<section class="trusted-companies theme-bg-color">
-				<div class="container-fuild">
-					<div class="trusted-companies-main">
-						<div class="clients-logo-main">
-							<div class="clients-logo-inner">
-								<?php if(have_rows('trusted_client_logos')):
-								while(have_rows('trusted_client_logos')):the_row();
-								$TCLogo = get_sub_field('trusted_client_logo');
-								?>
-								<div class="client-logo-wrap">
-									<div class="client-logo">
-										<img src="<?php echo $TCLogo['url'];?>" alt="<?php echo $TCLogo['alt'];?>">
-									</div>
-								</div>
-								<?php endwhile;endif;?>
-							</div>
+			<section class="cdu-services-sec">
+				<div class="container">
+					<div class="cdu-services-top">
+						<div class="section-title">
+							<span class="sec-title-small">CDU Services</span>
+							<h2 class="text-uppercase">Tailored Development Services</h2>
 						</div>
 					</div>
 				</div>
@@ -163,6 +167,28 @@ $videoPlay = get_field('video_play_btn_image','option');
 				</div>
 			</section>
 
+			<section class="services-sec theme-bg-color">
+				<div class="container">
+					<div class="services-top">
+						<div class="row">
+							<div class="col-lg-6 col-md-6 col-sm-12 col-12">
+								<div class="section-title">
+									<span class="sec-title-small">What We Do </span>
+									<h2 class="text-uppercase">Our Services</h2>
+									
+								</div>
+							</div>
+							<div class="col-lg-6 col-md-6 col-sm-12 col-12 text-end align-self-center">
+								<div class="cta-main">
+									<a href="#" class="btn btn-with-arrow">Discuss your project</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</section>
+
 			<section class="process-sec process-section">
 				<div class="container">
 					<div class="process-top">
@@ -223,220 +249,105 @@ $videoPlay = get_field('video_play_btn_image','option');
 			</div>
 		    </section> 		
 
-			<section class="services-sec theme-bg-color">
-				<div class="container">
-					<div class="services-top">
-						<div class="row">
-							<div class="col-lg-6 col-md-6 col-sm-12 col-12">
-								<div class="section-title">
-									<span class="sec-title-small"><?php echo the_field('service_small_title');?></span>
-									<h2 class="text-uppercase"><?php echo the_field('service_title_uppercase');?></h2>
-									
-								</div>
-							</div>
-							<div class="col-lg-6 col-md-6 col-sm-12 col-12 text-end align-self-center">
-								<div class="cta-main">
-									<a href="<?php echo the_field('discuss_project_btn_url','option');?>" class="btn btn-with-arrow"><?php echo the_field('discuss_project_btn','option');?></a>
-								</div>
-
-							</div>
-						</div>
-					</div>
-					<div class="services-tab-main">
-    <?php if (have_rows('service_tabs')) : ?>
-        <div class="tech-stack-row">
-            <div class="tech-stack-tabs home-left-tabs">
-                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                    <?php
-                    $sid = 0;
-                    while (have_rows('service_tabs')) : the_row(); ?>
-                        <button class="nav-link <?php echo $sid == 0 ? 'active' : ''; ?>" id="v-pills-<?php echo $sid; ?>-tab" data-bs-toggle="pill" data-bs-target="#v-pills-<?php echo $sid; ?>" type="button" role="tab" aria-controls="v-pills-<?php echo $sid; ?>" aria-selected="<?php echo $sid == 0 ? 'true' : 'false'; ?>">
-                            <span class="tab-title-text"><?php echo get_sub_field('tab_title'); ?></span>
-                            <span class="tab-title-icon">
-                                <?php $tabImg = get_sub_field('tab_image'); ?>
-                                <img src="<?php echo esc_url($tabImg['url']); ?>" alt="<?php echo esc_attr($tabImg['alt']); ?>">
-                            </span>
-                        </button>
-                        <?php $sid++;
-                    endwhile; ?>
-                </div>
-            </div>
-            <div class="ts-tab-content">
-                <div class="tab-content" id="v-pills-tabContent">
-                    <?php
-                    $sid = 0;
-                    while (have_rows('service_tabs')) : the_row(); ?>
-                        <div class="tab-pane fade <?php echo $sid == 0 ? 'show active' : ''; ?>" id="v-pills-<?php echo $sid; ?>" role="tabpanel" aria-labelledby="v-pills-<?php echo $sid; ?>-tab">
-                            <div class="ts-tab-content-main">
-                                <?php if (have_rows('tab_content')) : ?>
-                                    <ul class="nav nav-tabs" role="tablist">
-                                        <?php
-                                        $nid = 0;
-                                        while (have_rows('tab_content')) : the_row(); ?>
-                                            <li class="nav-item" role="presentation">
-                                                <a class="nav-link <?php echo $nid == 0 ? 'active' : ''; ?>" id="services-tab-<?php echo $nid; ?>" data-bs-toggle="tab" href="#services-tabpanel-<?php echo $nid; ?>" role="tab" aria-controls="services-tabpanel-<?php echo $nid; ?>" aria-selected="<?php echo $nid == 0 ? 'true' : 'false'; ?>"><?php echo get_sub_field('nested_tab_title'); ?></a>
-                                            </li>
-                                            <?php $nid++;
-                                        endwhile; ?>
-                                    </ul>
-                                    <div class="tab-content pt-5" id="tab-content">
-                                        <?php
-                                        $nid = 0;
-                                        while (have_rows('tab_content')) : the_row(); ?>
-                                            <div class="tab-pane <?php echo $nid == 0 ? 'active' : ''; ?>" id="services-tabpanel-<?php echo $nid; ?>" role="tabpanel" aria-labelledby="services-tab-<?php echo $nid; ?>">
-                                                <div class="tech-stack-tabrow">
-                                                    <div class="tech-stack-col">
-                                                        <ul>
-                                                            <?php if (have_rows('nested_tab_content')) :
-                                                                while (have_rows('nested_tab_content')) : the_row();
-                                                                    $s_img = get_sub_field('nested_tab_image'); ?>
-                                                                    <li>
-                                                                        <a href="#" class="ts-icon-text-link">
-                                                                            <div class="ts-icon"><img src="<?php echo esc_url($s_img['url']); ?>" alt="<?php echo esc_attr($s_img['alt']); ?>"> </div>
-                                                                            <div class="ts-text"><span><?php echo get_sub_field('nested_content_text'); ?></span></div>
-                                                                        </a>
-                                                                    </li>
-                                                                <?php endwhile;
-                                                            endif; ?>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <?php $nid++;
-                                        endwhile; ?>
-                                    </div>
-                                <?php endif; ?>
-                            </div>
-                        </div>
-                        <?php $sid++;
-                    endwhile; ?>
-                </div>
-            </div>
-        </div>
-    <?php endif; ?>
-	<div class="service-bottom-text text-center mt-5">
-							<p class="mb-0"><?php echo the_field('service_below_text');?></p>
-						</div>
-</div>
-
-				</div>
-			</section>
-
 			<section class="why-cdu-sec">
 				<div class="container">
 					<div class="why-cdu-top">
-						<div class="row">
-							<div class="col-lg-7 col-md-6 col-sm-12 col-12">
-								<div class="section-title">
-									<span class="sec-title-small"><?php echo the_field('why_cdu_small_title');?></span>
-									<h2 class="text-uppercase"><?php echo the_field('why_cdu_uppercase_title');?></h2>
-									
-								</div>
-							</div>
-							<div class="col-lg-5 col-md-6 col-sm-12 col-12 text-end align-self-center">
-								<div class="cta-main">
-									<a href="<?php echo the_field('discuss_project_btn_url','option');?>" class="btn btn-with-arrow"><?php echo the_field('discuss_project_btn','option');?></a>
-								</div>
-							</div>
+						<div class="section-title">
+							<span class="sec-title-small">Why CDU</span>
+							<h2 class="text-uppercase">Why choose CDU For  Development</h2>
 						</div>
 					</div>
 					<div class="points-count-main">
-						<?php if(have_rows('point_counts')):while(have_rows('point_counts')):the_row();?>
 						<div class="points-count-box">
-							<h3 class=""><?php echo get_sub_field('number');?></h3>
-							<p><?php echo get_sub_field('text');?></p>
+							<h3 class="">12+</h3>
+							<p>years of experience,</p>
 						</div>
-						<?php endwhile;endif;?>
+						<div class="points-count-box">
+							<h3 class="">50+</h3>
+							<p>Experienced & Delivered In 50+ Industries.</p>
+						</div>
+						<div class="points-count-box">
+							<h3 class="">300+ </h3>
+							<p>More than 300 successfully implemented projects</p>
+						</div>
 					</div>
 				</div>
+
+				
+
+
 				<div class="video-why-cdu-wrap">
 					<div class="container">
 						<div class="why-cdu-sec-video">
 							<div class="why-cdu-video-main">
-								<?php $videoBG = get_field('video_bg_image');
-								
-								?>
-								<img src="<?php echo $videoBG['url'];?>" alt="<?php echo $videoBG['alt'];?>">
-								<a href="<?php bloginfo('template_url'); ?>/assets/video/dummy_video.mp4" data-fancybox class="play-link" ><img src ="<?php echo $videoPlay['url'];?>" alt="<?php echo $videoPlay['alt'];?>"></a>
+								<img src="assets/images/why-cdu-video.png" alt="#">
+								<a href="assets/video/dummy_video.mp4" data-fancybox class="play-link"><img src="assets/images/play-icon.svg" alt="#"></a>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="tc-logos-main">
-					<div class="container">
-						<div class="tc-logos-row">
-						<?php if(have_rows('tc_logos')):while(have_rows('tc_logos')):the_row();
-						$TCImg = get_sub_field('tc_logo');
-						?>
-							<div class="tc-logos">
-								<img src="<?php echo $TCImg['url'];?>" alt="<?php echo $TCImg['alt'];?>">
-							</div>
-						<?php endwhile;endif;?>
-						</div>
-					</div>
-				</div>	
 			</section>
 
-			<section class="testimonials-sec theme-bg-color">
-				<div class="container">
-					<div class="testimonials-top">
-						<div class="row">
-							<div class="col-lg-7 col-md-6 col-sm-12 col-12">
-								<div class="section-title">
-									<span class="sec-title-small"><?php echo the_field('testimonial_small_title','option');?></span>
-									<h2 class="text-uppercase"><?php echo the_field('testimonail_uppercase_title','option');?></h2>
-									
-								</div>
-							</div>
-							<div class="col-lg-5 col-md-6 col-sm-12 col-12 text-end align-self-center">
-								<div class="cta-main d-flex justify-content-end gap-2">
-									<a href="<?php echo the_field('see_all_btn_url','option');?>" class="btn btn-with-arrow border-btn"><?php echo the_field('see_all_btn','option');?></a>
-									<a href="<?php echo the_field('discuss_project_btn_url','option');?>" class="btn btn-with-arrow"><?php echo the_field('discuss_project_btn','option');?></a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="testimonials-slider-main">
-					<div class="testimonials-slider">
-						<?php if (have_rows('testimonials','option')) : ?>
-							<?php while (have_rows('testimonials','option')) : the_row(); ?>
-								<div class="testimonials-slide">
-									<div class="testimonials-content">
-										<div class="testimonials-top">
-											<?php if (get_sub_field('testimonial_type','option') == 'text') : ?>
-												<div class="testimonials-top-text <?php echo get_sub_field('background_class','option'); ?>">
-													<p><?php the_sub_field('testimonial_text','option'); ?></p>
-												</div>
-											<?php elseif (get_sub_field('testimonial_type','option') == 'video') : 
-												$personImg = get_sub_field('video_thumbnail','option');
-												?>
-												<div class="testimonials-top-video">
-													<img class="client-img-v" src="<?php echo $personImg['url'];?>" alt="<?php $personImg['alt'];?>">
-													<a href="<?php the_sub_field('video_url'); ?>" data-fancybox class="play-link"><img src="<?php echo $videoPlay['url'];?>" alt="<?php echo $videoPlay['alt'];?>"></a>
-												</div>
-											<?php endif; ?>
-										</div>
-										<div class="testimonials-bottom">
-											<div class="testimonials-person-info">
-												<div class="t-person-img">
-													<?php $testimonialImg = get_sub_field('person_image','option');?>
-													<img src="<?php echo $testimonialImg['url'];?>" alt="<?php echo $testimonialImg['alt'];?>">
-												</div>
-												<div class="t-person-info">
-													<span class="name"><?php the_sub_field('person_name','option'); ?></span>
-													<span class="name-position"><?php the_sub_field('person_position','option'); ?></span>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							<?php endwhile; ?>
-						<?php endif; ?>
-					</div>
+            <section class="testimonials-sec theme-bg-color">
+                                        <div class="container">
+                                            <div class="testimonials-top">
+                                                <div class="row">
+                                                    <div class="col-lg-7 col-md-6 col-sm-12 col-12">
+                                                        <div class="section-title">
+                                                            <span class="sec-title-small"><?php echo the_field('testimonial_small_title','option');?></span>
+                                                            <h2 class="text-uppercase"><?php echo the_field('testimonail_uppercase_title','option');?></h2>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-5 col-md-6 col-sm-12 col-12 text-end align-self-center">
+                                                        <div class="cta-main d-flex justify-content-end gap-2">
+                                                            <a href="<?php echo the_field('see_all_btn_url','option');?>" class="btn btn-with-arrow border-btn"><?php echo the_field('see_all_btn','option');?></a>
+                                                            <a href="<?php echo the_field('discuss_project_btn_url','option');?>" class="btn btn-with-arrow"><?php echo the_field('discuss_project_btn','option');?></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="testimonials-slider-main">
+                                            <div class="testimonials-slider">
+                                                <?php if (have_rows('testimonials','option')) : ?>
+                                                    <?php while (have_rows('testimonials','option')) : the_row(); ?>
+                                                        <div class="testimonials-slide">
+                                                            <div class="testimonials-content">
+                                                                <div class="testimonials-top">
+                                                                    <?php if (get_sub_field('testimonial_type','option') == 'text') : ?>
+                                                                        <div class="testimonials-top-text <?php echo get_sub_field('background_class','option'); ?>">
+                                                                            <p><?php the_sub_field('testimonial_text','option'); ?></p>
+                                                                        </div>
+                                                                    <?php elseif (get_sub_field('testimonial_type','option') == 'video') : 
+                                                                        $personImg = get_sub_field('video_thumbnail','option');
+                                                                        ?>
+                                                                        <div class="testimonials-top-video">
+                                                                            <img class="client-img-v" src="<?php echo $personImg['url'];?>" alt="<?php $personImg['alt'];?>">
+                                                                            <a href="<?php the_sub_field('video_url'); ?>" data-fancybox class="play-link"><img src="<?php echo $videoPlay['url'];?>" alt="<?php echo $videoPlay['alt'];?>"></a>
+                                                                        </div>
+                                                                    <?php endif; ?>
+                                                                </div>
+                                                                <div class="testimonials-bottom">
+                                                                    <div class="testimonials-person-info">
+                                                                        <div class="t-person-img">
+                                                                            <?php $testimonialImg = get_sub_field('person_image','option');?>
+                                                                            <img src="<?php echo $testimonialImg['url'];?>" alt="<?php echo $testimonialImg['alt'];?>">
+                                                                        </div>
+                                                                        <div class="t-person-info">
+                                                                            <span class="name"><?php the_sub_field('person_name','option'); ?></span>
+                                                                            <span class="name-position"><?php the_sub_field('person_position','option'); ?></span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    <?php endwhile; ?>
+                                                <?php endif; ?>
+                                            </div>
 
-					</div>
-				</div>
-			</section>
+                                            </div>
+                                        </div>
+            </section>
 
 			<section class="blog-sec">
 				<div class="container">
@@ -540,10 +451,6 @@ $videoPlay = get_field('video_play_btn_image','option');
 				</div>
 			</section>
 
-			<!-- Content End -->
-
-			<?php echo do_shortcode('[custom_contact_us_section]') ;?>
-		</div>
 
 <?php
 

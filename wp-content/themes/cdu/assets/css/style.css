@@ -52,6 +52,7 @@ p a:hover{text-decoration:underline;}
 
 	.black-bg-overlay{background: #000;}
 	.theme-bg-color{background-color: #F8CE5A !important;}
+	.white-bg-color{background-color: #fff !important;}
 
 /*upload image background*/
 	.upload-background{background: #EDEDED}
@@ -442,4 +443,51 @@ ul.card-bullets li{font-size:14px;padding:7px 17px;border-radius:16px;border:1px
 .service-banner-points-wp{max-width:650px;}
 .service-banner-points-wp ul li{display:inline-block;text-align:left;width:100%;font-size:20px;line-height:34px;position:relative;padding-left:50px;margin:10px 0px;}
 .service-banner-points-wp ul li:before{content:'';width:36px;height:36px;display:inline-block;background:url('../images/right-icon-black.svg');background-repeat:no-repeat;background-size:contain;background-position:center;position:absolute;left:0px;}
+
+
+.portfolio-grid-item{position:relative;z-index:1;}
+.portfolio-grid-item .portfolio-img{max-width:100%;width:100%;}
+.portfolio-grid-item .portfolio-item-info{position:absolute;z-index:1;top:5%;left:0px;right:0px;max-width:1640px;width:87%;margin:auto;padding:15px;}
+.portfolio-info-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:25px;gap: 40px;}
+.portfolio-grid-item .portfolio-link {display: inline-block; width: 100%; position: absolute; left: 0px; right: 0px; bottom: 0px; top: 0px; z-index: 2; }
+.portfolio-logo .portfolio-logo-img {max-width: 100%; max-height: 60px; }
+.portfolio-grid-item .portfolio-btn .btn {position: relative; z-index: 3; }
+
+ul.case--study-type-inner li a{backdrop-filter:blur(20px);background: rgba(255,255,255,0.8);color:#000;border:none;}
+ul.case--study-type-inner li a:hover{background:rgba(253,184,17,1);}
+ul.case--study-type-inner li a{padding:7px 17px;border-radius:25px;color: #000;font-size:14px;text-transform:uppercase;font-weight:normal;font-size: calc(0.4vw + 0.1vh + 0.2vmax);}
+ul.case--study-type-inner{gap: 10px;display:flex;flex-wrap:wrap;}
+ul.case--study-type-inner li a:hover{border-color:#f8ce5a;color:#fff;background:#f8ce5a;}
+
+.portfolio-btn .btn{padding:7% 67px 7% 30px;font-size:calc(0.6vw + 0.2vh + 0.2vmax);font-weight:500;font-family:'Libre Franklin',sans-serif;transition:all .4s ease-in-out 0s;-moz-transition:all .4s ease-in-out 0s;-webkit-transition:all .4s ease-in-out 0s;-o-transition:all .4s ease-in-out 0s;border-radius:40px;border:1px solid #000000;text-transform:uppercase;box-shadow:none;min-width:auto;color:#fff;line-height:1;}
+.portfolio-btn .btn::after{background-size: 60%; background-repeat: no-repeat; background-position: center; display: inline-block; vertical-align: middle; background-color: #f8ce5a; border-radius: 100%; position: absolute; right: 7px; top: 0px; bottom: 0px; margin: auto; padding: 7%; width: auto; height: auto; display: inline-table;}
+.portfolio-grid{display:flex;flex-wrap:wrap;gap:15px;}
+.portfolio-logo{max-width:40%;}
+.portfolio-grid.col-two{padding:15px;}
+.portfolio-grid.col-one .portfolio-grid-item {width: 100%; }
+.portfolio-grid.col-two .portfolio-grid-item{width:calc(50% - 8px);}
+
+
+/*.portfolio-grid-item {width: calc(50% - 15px - 10px); }*/
+
+
+
+.awards-sec{overflow:hidden;}
+.awards-slider-main{margin-right:-18%;}
+.awards-slider .slick-list.draggable{padding-right:20%;}
+/*.awards-slide.slick-slide.slick-current.slick-active{transform:scale(1);}
+.awards-slide.slick-slide.slick-current.slick-active + .awards-slide.slick-slide.slick-active{transform:scale(0.85);}
+.awards-slide.slick-slide.slick-current.slick-active + .awards-slide.slick-slide.slick-active + .awards-slide.slick-slide{transform:scale(0.7);}*/
+
+.awards-slide.slick-slide.slick-current.slick-active .awards-slide-img{padding: 10px;}
+.awards-slide.slick-slide.slick-current.slick-active + .awards-slide.slick-slide.slick-active .awards-slide-img{padding: 10%;}
+.awards-slide.slick-slide.slick-current.slick-active + .awards-slide.slick-slide.slick-active + .awards-slide.slick-slide .awards-slide-img{padding: 20%;}
+
+
+
+.awards-slide-img{text-align:center; padding: 10px;}
+.awards-slide-img img{display:inline;}
+.awards-sec button.slick-prev.slick-arrow{left:0px;transform:none;}
+.awards-sec button.slick-next.slick-arrow{right:unset;left:50px;transform:none;}
+
 

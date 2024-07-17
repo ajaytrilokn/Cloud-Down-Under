@@ -317,6 +317,11 @@ h1 { font-size:50px;}
 	.team-sec-bottom{padding-top:35px;}
 	.team-section{padding:50px 0px;}
 	.blog-sec{padding:50px 0px;}
+
+	.team-section button.slick-prev.slick-arrow{left:-20px;}
+	.team-section button.slick-next.slick-arrow{right:-15px;}
+	.team-section button.slick-arrow{top:43%;}
+
 	
 }
 

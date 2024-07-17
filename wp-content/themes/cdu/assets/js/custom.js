@@ -154,6 +154,42 @@ $(document).ready(function() {
         ]
     });
 
+    $('.awards-slider').slick({
+        dots: false,
+        arrows: true,
+        autoplay: false,
+        infinite: true,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        // speed: 2000,
+        
+        responsive: [{
+                breakpoint: 1400,
+                settings: {
+                    autoplay: true,
+                    autoplaySpeed: 2000,
+                    slidesToShow: 3,
+                    infinite: true,
+                    dots: false
+                }
+            }, {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 3,
+                }
+            }, {
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 2,
+                }
+            }, {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+        ]
+    });
 
 
     $('.testimonials-slider').slick({

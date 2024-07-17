@@ -309,8 +309,50 @@ $bannerbottomImg = get_field('banner_bottom_img');
 							<h2 class="text-uppercase">Your success is our success.</h2>
 						</div>
 					</div>
+					<div class="awards-bottom">
+						<div class="row">
+							<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+								<div class="awards-left-main">
+									<div class="awards-left-top">
+										<h2>Over 72 awards for <br>mobile app & Web <br>development (and counting).</h2>
+										<h3 class="font-we-md">But it’s never about winning awards for us.</h3>
+									</div>
+									<div class="awards-left-bottom"> 
+										<p class="awards-text">We’re chuffed when our work stands out and gets recognised globally. We’re more focused on helping you build better business outcomes with more innovative, intuitive, and stunningly successful mobile apps. Take a look.</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+								<div class="awards-slider-main">
+									<div class="awards-slider">
+										<div class="awards-slide">
+											<div class="awards-slide-img">
+												<img src="<?php echo bloginfo('template_directory');?>/assets/images/awards-1.png" alt="#">
+											</div>
+										</div>
+										<div class="awards-slide">
+											<div class="awards-slide-img">
+												<img src="<?php echo bloginfo('template_directory');?>/assets/images/awards-1.png" alt="#">
+											</div>
+										</div>
+										<div class="awards-slide">
+											<div class="awards-slide-img">
+												<img src="<?php echo bloginfo('template_directory');?>/assets/images/awards-1.png" alt="#">
+											</div>
+										</div>
+										<div class="awards-slide">
+											<div class="awards-slide-img">
+												<img src="<?php echo bloginfo('template_directory');?>/assets/images/awards-1.png" alt="#">
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
-			</section>	
+			</section>
 			<section class="testimonials-sec theme-bg-color">
 				<div class="container">
 					<div class="testimonials-top">
@@ -472,12 +514,8 @@ $bannerbottomImg = get_field('banner_bottom_img');
 
 				</div>
 			</section>
-
-			
-
-
 			<!-- Content End -->
-
+			<!-- Shortcode Of Contact Us Section -->
 			<?php echo do_shortcode('[custom_contact_us_section]') ;?>
 <?php 
 
