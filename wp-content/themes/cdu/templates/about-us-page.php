@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: About Us 
+Template Name: About Us Page
 */
 get_header();
 $videoPlay = get_field('video_play_btn_image','option');
