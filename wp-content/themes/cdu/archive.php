@@ -8,7 +8,7 @@ get_header();
         <div class="container">
             <div class="banner-links-main">
                 <ul>
-                    <li class="banner-links"><a href="#">Home</a></li>
+                    <li class="banner-links"><a href="#">Hom</a></li>
                     <li class="banner-links"><span>/</span></li>
                     <li class="banner-links active"><a href="#">Insights</a></li>
                 </ul>
