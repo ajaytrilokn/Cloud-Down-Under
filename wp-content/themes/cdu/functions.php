@@ -75,6 +75,12 @@ if( function_exists('acf_add_options_page') ) {
         'parent_slug'   => 'theme-general-settings',
     ));
 
+    acf_add_options_sub_page(array(
+        'page_title'    => 'Theme Blog Details Settings',
+        'menu_title'    => 'Blog Detail Box',
+        'parent_slug'   => 'theme-general-settings',
+    ));
+
 }
 
 
@@ -99,5 +105,83 @@ function custom_contact_us_section_shortcode() {
 }
 
 add_shortcode('custom_contact_us_section', 'custom_contact_us_section_shortcode');
+
+
+// Custom Case Study Post 
+
+function case_studies_post_type() {
+
+	$labels = array(
+		'name'                  => _x( 'Case Studies', 'Post Type General Name', 'text_domain' ),
+		'singular_name'         => _x( 'Case Study', 'Post Type Singular Name', 'text_domain' ),
+		'menu_name'             => __( 'Case Studies', 'text_domain' ),
+		'name_admin_bar'        => __( 'Case Study', 'text_domain' ),
+		'archives'              => __( 'Case Study Archives', 'text_domain' ),
+		'attributes'            => __( 'Case Study Attributes', 'text_domain' ),
+		'parent_item_colon'     => __( 'Parent Case Study:', 'text_domain' ),
+		'all_items'             => __( 'All Case Studies', 'text_domain' ),
+		'add_new_item'          => __( 'Add New Case Study', 'text_domain' ),
+		'add_new'               => __( 'Add New', 'text_domain' ),
+		'new_item'              => __( 'New Case Study', 'text_domain' ),
+		'edit_item'             => __( 'Edit Case Study', 'text_domain' ),
+		'update_item'           => __( 'Update Case Study', 'text_domain' ),
+		'view_item'             => __( 'View Case Study', 'text_domain' ),
+		'view_items'            => __( 'View Case Studies', 'text_domain' ),
+		'search_items'          => __( 'Search Case Study', 'text_domain' ),
+		'not_found'             => __( 'Not found', 'text_domain' ),
+		'not_found_in_trash'    => __( 'Not found in Trash', 'text_domain' ),
+		'featured_image'        => __( 'Featured Image', 'text_domain' ),
+		'set_featured_image'    => __( 'Set featured image', 'text_domain' ),
+		'remove_featured_image' => __( 'Remove featured image', 'text_domain' ),
+		'use_featured_image'    => __( 'Use as featured image', 'text_domain' ),
+		'insert_into_item'      => __( 'Insert into case study', 'text_domain' ),
+		'uploaded_to_this_item' => __( 'Uploaded to this case study', 'text_domain' ),
+		'items_list'            => __( 'Case studies list', 'text_domain' ),
+		'items_list_navigation' => __( 'Case study list navigation', 'text_domain' ),
+		'filter_items_list'     => __( 'Filter case studies list', 'text_domain' ),
+	);
+	$args = array(
+		'label'                 => __( 'Case Study', 'text_domain' ),
+		'description'           => __( 'Case studies', 'text_domain' ),
+		'labels'                => $labels,
+		'supports'              => array( 'title', 'editor', 'thumbnail', 'revisions','title', 'editor', 'excerpt', 'author','trackbacks', 'custom-fields', 'comments', 'page-attributes' ),
+		'hierarchical'          => true,
+		'public'                => true,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'menu_position'         => 5,
+		'menu_icon'             => 'dashicons-media-spreadsheet',
+		'show_in_admin_bar'     => true,
+		'show_in_nav_menus'     => true,
+		'can_export'            => true,
+		'has_archive'           => false,
+		'exclude_from_search'   => true,
+		'publicly_queryable'    => true,
+		'rewrite'               => true,
+        'capability_type'       => 'post',
+		'taxonomies'  => array( 'category','post_tag'),
+		
+
+	);
+	register_post_type( 'case-study', $args );
+
+}
+add_action( 'init', 'case_studies_post_type',0);
+
+
+
+// Function to calculate and display reading time
+function custom_reading_time() {
+    $content = get_post_field( 'post_content', get_the_ID() );
+
+    $word_count = str_word_count( strip_tags( $content ) );
+
+    $words_per_minute = 200;
+
+    $reading_time = ceil( $word_count / $words_per_minute );
+
+    echo $reading_time . ' Min';
+}
+
 
 ?>

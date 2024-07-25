@@ -46,7 +46,6 @@
 													'add_li_class'  => 'nav-item'
 												))
 												;?>
-
 						                        <div class="header-btn-main">
 						                        	<a href="<?php echo the_field('discuss_project_btn_url','option');?>" class="btn btn-with-arrow">
 						                        		<?php echo the_field('discuss_project_btn','option');?>

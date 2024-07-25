@@ -154,12 +154,13 @@ $(document).ready(function() {
         ]
     });
 
-    $('.awards-slider').slick({
+    $('.work-features-slider').slick({
         dots: false,
         arrows: true,
         autoplay: false,
+        autoplaySpeed: 2000,
         infinite: true,
-        slidesToShow: 2,
+        slidesToShow: 3,
         slidesToScroll: 1,
         // speed: 2000,
         
@@ -189,6 +190,63 @@ $(document).ready(function() {
                 }
             }
         ]
+    });
+
+    $('.awards-slider').slick({
+        dots: false,
+        arrows: false,
+        autoplay: false,
+        infinite: true,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        // speed: 2000,
+        
+        responsive: [{
+                breakpoint: 1400,
+                settings: {
+                    autoplay: false,
+                    autoplaySpeed: 2000,
+                    slidesToShow: 2,
+                    infinite: true,
+                    dots: false
+                }
+            }, {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 2,
+                }
+            }, {
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 2,
+                }
+            }, {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 2,
+                }
+            }
+        ]
+    });
+    $(".prev-btn").click(function() {
+        $(".awards-slider").slick("slickPrev");
+    });
+
+    $(".next-btn").click(function() {
+        $(".awards-slider").slick("slickNext");
+    });
+    $(".prev-btn").addClass("slick-disabled");
+    $(".awards-slider").on("afterChange", function() {
+        if ($(".slick-prev").hasClass("slick-disabled")) {
+            $(".prev-btn").addClass("slick-disabled");
+        } else {
+            $(".prev-btn").removeClass("slick-disabled");
+        }
+        if ($(".slick-next").hasClass("slick-disabled")) {
+            $(".next-btn").addClass("slick-disabled");
+        } else {
+            $(".next-btn").removeClass("slick-disabled");
+        }
     });
 
 
@@ -379,9 +437,92 @@ $(document).ready(function() {
     // top nav header scroll active class add end
 
 
+// ==================================================================
+//        SERVICE PAGE SIDE NAV CLICK TO  SCROLL TOP JS START
+// ==================================================================  
+
+    function onScroll(event) {
+        var scrollPos = $(document).scrollTop();
+        $('.allServices-ul li a.scrollTosection' ).each(function() {
+            var currLink = $(this);
+            var refElement = $(currLink.attr("href"));
+            
+            //console.table(refElement.position().top, scrollPos, refElement.position().top + refElement.height(), scrollPos);
+
+            if (refElement.position().top - 50 <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+                $('.allServices-ul li a.scrollTosection').removeClass("active");
+                currLink.addClass("active");
+            } else {
+                currLink.removeClass("active");
+            }
+        });
+    }
+
+    $(document).on("scroll", onScroll);
+
+    //smoothscroll
+    $('a[href^="#"]').on('click', function(e) {
+        e.preventDefault();
+        $(document).off("scroll");
+
+        $('a').each(function() {
+            $(this).removeClass('active');
+        })
+        $(this).addClass('active');
+
+        var target = this.hash,
+            menu = target;
+        $target = $(target);
+        $('html, body').stop().animate({
+            'scrollTop': $target.offset().top - 50
+        }, 500, 'swing', function() {
+            //window.location.hash = target;
+            $(document).on("scroll", onScroll);
+        });
+    });
+
+// ==================================================================
+//        SERVICE PAGE SIDE NAV CLICK TO  SCROLL TOP JS START
+// ================================================================== 
+
+
+    $(document).ready(function() {
+        var $btns = $(".careers-btn").click(function() {
+            if (this.id == "all") {
+                $("#careersRow > div").fadeIn(450);
+            } else {
+                var $el = $("." + this.id).fadeIn(450);
+                $("#careersRow > div").not($el).hide();
+            }
+            $btns.removeClass("active");
+            $(this).addClass("active");
+        });
+    });
+
 
 
 }); 
 
+// ==================================================================
+//        Categories Select Options JS START
+// ================================================================== 
 
+const menu = document.querySelector(".select-menu");
+const [selectBtn, sBtnText] = [
+    menu.querySelector(".select-btn"),
+    menu.querySelector(".sBtn-text")
+];
+
+selectBtn.onclick = () => menu.classList.toggle("active");
+
+menu.querySelectorAll(".option").forEach((option) => {
+    option.onclick = () => {
+        sBtnText.innerText = option.querySelector(".option-text").innerText;
+        menu.classList.remove("active");
+    };
+});
+
+// ==================================================================
+//        Categories Select Options JS END
+// ================================================================== 
 

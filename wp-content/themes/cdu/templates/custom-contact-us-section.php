@@ -21,7 +21,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 col-md-12 col-sm-12 col-12 contact_us_form">
+            <div class="col-lg-6 col-md-12 col-sm-12 col-12 contact_us_form" id="contact_us_form">
                 <div class="contact_us_form-title">
                     <h2 class="white_text">Empower Your Growth: Partner with Us Today!</h2>
                 </div>

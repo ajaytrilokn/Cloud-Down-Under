@@ -305,8 +305,8 @@ $bannerbottomImg = get_field('banner_bottom_img');
 				<div class="container">
 					<div class="awards-top">
 						<div class="section-title">
-							<span class="sec-title-small">CDU Awards</span>
-							<h2 class="text-uppercase">Your success is our success.</h2>
+						<span class="sec-title-small"><?php echo the_field('award_title_small','option');?></span>
+							<h2 class="text-uppercase"><?php echo the_field('award_uppercase_title','option');?></h2>
 						</div>
 					</div>
 					<div class="awards-bottom">
@@ -314,38 +314,29 @@ $bannerbottomImg = get_field('banner_bottom_img');
 							<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
 								<div class="awards-left-main">
 									<div class="awards-left-top">
-										<h2>Over 72 awards for <br>mobile app & Web <br>development (and counting).</h2>
-										<h3 class="font-we-md">But it’s never about winning awards for us.</h3>
+									<?php echo the_field('award_left_top_text','option');?>
 									</div>
 									<div class="awards-left-bottom"> 
-										<p class="awards-text">We’re chuffed when our work stands out and gets recognised globally. We’re more focused on helping you build better business outcomes with more innovative, intuitive, and stunningly successful mobile apps. Take a look.</p>
+										<p class="awards-text"><?php echo the_field('award_left_bottom_text','option');?></p>
+										<div class="btn-wrap">
+											<button class="slick-arrow slick-prev prev-btn">Previous</button>
+											<button class="slick-arrow slick-next next-btn">Next</button>
+										</div>
 									</div>
 								</div>
 							</div>
 							<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
 								<div class="awards-slider-main">
 									<div class="awards-slider">
+										<?php if(have_rows('award_slider','option')):while(have_rows('award_slider','option')):the_row();
+										$awardImg = get_sub_field('award_slider_image','option');
+										?>
 										<div class="awards-slide">
 											<div class="awards-slide-img">
-												<img src="<?php echo bloginfo('template_directory');?>/assets/images/awards-1.png" alt="#">
+												<img src="<?php echo $awardImg['url'];?>" alt="<?php echo $awardImg['alt'];?>">
 											</div>
 										</div>
-										<div class="awards-slide">
-											<div class="awards-slide-img">
-												<img src="<?php echo bloginfo('template_directory');?>/assets/images/awards-1.png" alt="#">
-											</div>
-										</div>
-										<div class="awards-slide">
-											<div class="awards-slide-img">
-												<img src="<?php echo bloginfo('template_directory');?>/assets/images/awards-1.png" alt="#">
-											</div>
-										</div>
-										<div class="awards-slide">
-											<div class="awards-slide-img">
-												<img src="<?php echo bloginfo('template_directory');?>/assets/images/awards-1.png" alt="#">
-											</div>
-										</div>
-
+										<?php endwhile;endif;?>
 									</div>
 								</div>
 							</div>

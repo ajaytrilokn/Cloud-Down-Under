@@ -193,7 +193,7 @@ $videoPlay = get_field('video_play_btn_image','option');
               			<article class="the-process__step" data-is-active data-is-toggled="true" data-step>
 			                <div class="the-process__step-circle">
 				                <svg height="48" width="48" class="the-process__step-circle-anim">
-				                    <circle class="circle" cx="50%" cy="50%" r="50%" stroke="#40eb98" stroke-width="1" fill-opacity="0" />
+				                    <circle class="circle" cx="50%" cy="50%" r="50%" stroke="#fcbc13" stroke-width="1" fill-opacity="0" />
 				                </svg>
 				                <a href="#discovery" data-step-link><?php echo get_sub_field('steps','option');?></a>
 			                </div>
@@ -223,7 +223,7 @@ $videoPlay = get_field('video_play_btn_image','option');
 			</div>
 		    </section> 		
 
-			<section class="services-sec theme-bg-color">
+			<!-- <section class="services-sec theme-bg-color">
 				<div class="container">
 					<div class="services-top">
 						<div class="row">
@@ -319,6 +319,410 @@ $videoPlay = get_field('video_play_btn_image','option');
 						</div>
 </div>
 
+				</div>
+			</section> -->
+
+			<section class="services-sec theme-bg-color">
+				<div class="container">
+					<div class="services-top">
+						<div class="row">
+							<div class="col-lg-6 col-md-6 col-sm-12 col-12">
+								<div class="section-title">
+									<span class="sec-title-small">What We Do </span>
+									<h2 class="text-uppercase">Our Services</h2>
+									
+								</div>
+							</div>
+							<div class="col-lg-6 col-md-6 col-sm-12 col-12 text-end align-self-center">
+								<div class="cta-main">
+									<a href="<?php echo the_field('discuss_project_btn_url','option');?>" class="btn btn-with-arrow"><?php echo the_field('discuss_project_btn','option');?></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="service-sec-content">
+						<div class="services-tab-main">
+							<div class="tech-stack-row">
+								<div class="tech-stack-tabs home-left-tabs">
+									<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+									    <button class="nav-link active" id="v-pills-design-tab" data-bs-toggle="pill" data-bs-target="#v-pills-design" type="button" role="tab" aria-controls="v-pills-design" aria-selected="true">
+									    	<span class="tab-title-text">Design</span> 
+									    	<span class="tab-title-icon">
+									    		<img src="<?php echo bloginfo('template_url');?>/assets/images/services-icon/icon-design.svg">
+									    	</span> 
+									    </button>
+									    <button class="nav-link" id="v-pills-build-tab" data-bs-toggle="pill" data-bs-target="#v-pills-build" type="button" role="tab" aria-controls="v-pills-build" aria-selected="false">
+									    	<span class="tab-title-text">Build</span> 
+									    	<span class="tab-title-icon">
+									    		<img src="<?php echo bloginfo('template_url');?>/assets/images/services-icon/icon-build.svg">
+									    		</span> 
+									    </button>
+									    <button class="nav-link" id="v-pills-support-tab" data-bs-toggle="pill" data-bs-target="#v-pills-support" type="button" role="tab" aria-controls="v-pills-support" aria-selected="false">
+									    	<span class="tab-title-text">Support</span> 
+									    	<span class="tab-title-icon">
+									    		<img src="<?php echo bloginfo('template_url');?>/assets/images/services-icon/icon-support.svg">
+									    	</span> 
+									    </button>
+									</div>	
+								</div>
+								<div class="ts-tab-content">
+									<div class="tab-content" id="v-pills-tabContent">
+									    <div class="tab-pane fade show active" id="v-pills-design" role="tabpanel" aria-labelledby="v-pills-design-tab">
+									    	<div class="ts-tab-content-main">
+									    		<ul class="nav nav-tabs" role="tablist">
+													<li class="nav-item" role="presentation">
+													    <a class="nav-link active" id="services-tab-0" data-bs-toggle="tab" href="#services-tabpanel-0" role="tab" aria-controls="services-tabpanel-0" aria-selected="true">Design Services</a>
+													</li>
+												 	<li class="nav-item" role="presentation">
+												    	<a class="nav-link" id="services-tab-1" data-bs-toggle="tab" href="#services-tabpanel-1" role="tab" aria-controls="services-tabpanel-1" aria-selected="false">Tools</a>
+												  </li>
+												</ul>
+												<div class="tab-content pt-5" id="tab-content">
+												  	<div class="tab-pane active" id="services-tabpanel-0" role="tabpanel" aria-labelledby="services-tab-0">
+													  	<div class="tech-stack-tabrow">
+											    			<div class="tech-stack-col">
+											    				<ul>								
+											    					<li>
+											    						<a href="#" class="ts-icon-text-link">
+												    						<div class="ts-icon"><img src="<?php echo bloginfo('template_url');?>/assets/images/services-icon/Design/Design Services/3d-Game-design.png" alt="#"> </div>
+												    						<div class="ts-text"><span>3d Game Design</span></div>
+											    						</a>
+											    					</li>
+											    					<li>
+											    						<a href="#" class="ts-icon-text-link">
+												    						<div class="ts-icon"><img src="<?php echo bloginfo('template_url');?>/assets/images/services-icon/Design/Design Services/Character-Design.png" alt="#"> </div>
+												    						<div class="ts-text"><span>Character Design</span></div>
+											    						</a>
+											    					</li>
+											    					<li>
+											    						<a href="#" class="ts-icon-text-link">
+												    						<div class="ts-icon"><img src="<?php echo bloginfo('template_url');?>/assets/images/services-icon/Design/Design Services/Design-Prototyping.png" alt="#"> </div>
+												    						<div class="ts-text"><span>Design Prototyping</span></div>
+											    						</a>
+											    					</li>
+											    					<li>
+											    						<a href="#" class="ts-icon-text-link">
+												    						<div class="ts-icon"><img src="<?php echo bloginfo('template_url');?>/assets/images/services-icon/Design/Design Services/Graphic-Design.png" alt="#"> </div>
+												    						<div class="ts-text"><span>Graphic Design</span></div>
+											    						</a>
+											    					</li>
+											    					<li>
+											    						<a href="#" class="ts-icon-text-link">
+												    						<div class="ts-icon"><img src="<?php echo bloginfo('template_url');?>/assets/images/services-icon/Design/Design Services/LOGO-design.png" alt="#"> </div>
+												    						<div class="ts-text"><span>LOGO design</span></div>
+											    						</a>
+											    					</li>
+											    					<li>
+											    						<a href="#" class="ts-icon-text-link">
+												    						<div class="ts-icon"><img src="<?php echo bloginfo('template_url');?>/assets/images/services-icon/Design/Design Services/Mobile-App-Design.png" alt="#"> </div>
+												    						<div class="ts-text"><span>Mobile App Design</span></div>
+											    						</a>
+											    					</li>
+											    					<li>
+											    						<a href="#" class="ts-icon-text-link">
+												    						<div class="ts-icon"><img src="<?php echo bloginfo('template_url');?>/assets/images/services-icon/Design/Design Services/Responsive-Web-Design.png" alt="#"> </div>
+												    						<div class="ts-text"><span>Responsive Web Design</span></div>
+											    						</a>
+											    					</li>
+											    					<!-- <li>
+											    						<a href="#" class="ts-icon-text-link">
+												    						<div class="ts-icon"><img src="<?php echo bloginfo('template_url');?>/assets/images/services-icon/objectiveC.svg" alt="#"> </div>
+												    						<div class="ts-text"><span>ObjectiveC</span></div>
+											    						</a>
+											    					</li>
+											    					<li>
+											    						<a href="#" class="ts-icon-text-link">
+												    						<div class="ts-icon"><img src="<?php echo bloginfo('template_url');?>/assets/images/services-icon/titanium.svg" alt="#"> </div>
+												    						<div class="ts-text"><span>Titanium</span></div>
+											    						</a>
+											    					</li> -->
+											    				</ul>
+											    			</div>
+											    		</div>
+												  	</div>
+												  	<div class="tab-pane" id="services-tabpanel-1" role="tabpanel" aria-labelledby="services-tab-1">
+														<div class="tech-stack-tabrow">
+											    			<div class="tech-stack-col">
+											    				<ul>															
+											    					<li>
+											    						<a href="#" class="ts-icon-text-link">
+												    						<div class="ts-icon"><img src="<?php echo bloginfo('template_url');?>/assets/images/services-icon/Design/Design Tools/Figma.png" alt="#"> </div>
+												    						<div class="ts-text"><span>Figma</span></div>
+											    						</a>
+											    					</li>
+											    					<li>
+											    						<a href="#" class="ts-icon-text-link">
+												    						<div class="ts-icon"><img src="<?php echo bloginfo('template_url');?>/assets/images/services-icon/Design/Design Tools/Illustrator.png" alt="#"> </div>
+												    						<div class="ts-text"><span>Illustrator</span></div>
+											    						</a>
+											    					</li>
+											    					<li>
+											    						<a href="#" class="ts-icon-text-link">
+												    						<div class="ts-icon"><img src="<?php echo bloginfo('template_url');?>/assets/images/services-icon/Design/Design Tools/invision.png" alt="#"> </div>
+												    						<div class="ts-text"><span>invision</span></div>
+											    						</a>
+											    					</li>
+											    					<li>
+											    						<a href="#" class="ts-icon-text-link">
+												    						<div class="ts-icon"><img src="<?php echo bloginfo('template_url');?>/assets/images/services-icon/Design/Design Tools/Photoshop.png" alt="#"> </div>
+												    						<div class="ts-text"><span>Photoshop</span></div>
+											    						</a>
+											    					</li>
+											    					<li>
+											    						<a href="#" class="ts-icon-text-link">
+												    						<div class="ts-icon"><img src="<?php echo bloginfo('template_url');?>/assets/images/services-icon/Design/Design Tools/XD.png" alt="#"> </div>
+												    						<div class="ts-text"><span>XD</span></div>
+											    						</a>
+											    					</li>
+											    					<!-- <li>
+											    						<a href="#" class="ts-icon-text-link">
+												    						<div class="ts-icon"><img src="<?php echo bloginfo('template_url');?>/assets/images/services-icon/swift.svg" alt="#"> </div>
+												    						<div class="ts-text"><span>Swift</span></div>
+											    						</a>
+											    					</li>
+											    					<li>
+											    						<a href="#" class="ts-icon-text-link">
+												    						<div class="ts-icon"><img src="<?php echo bloginfo('template_url');?>/assets/images/services-icon/kotlin.svg" alt="#"> </div>
+												    						<div class="ts-text"><span>Kotlin</span></div>
+											    						</a>
+											    					</li>
+											    					<li>
+											    						<a href="#" class="ts-icon-text-link">
+												    						<div class="ts-icon"><img src="<?php echo bloginfo('template_url');?>/assets/images/services-icon/objectiveC.svg" alt="#"> </div>
+												    						<div class="ts-text"><span>ObjectiveC</span></div>
+											    						</a>
+											    					</li> -->
+											    				</ul>
+											    			</div>
+											    		</div>
+												  	</div>
+												</div>
+									    	</div>
+									    </div>
+									    <div class="tab-pane fade" id="v-pills-build" role="tabpanel" aria-labelledby="v-pills-build-tab">
+									    	<div class="ts-tab-content-main">
+									    		<ul class="nav nav-tabs" role="tablist">
+													<li class="nav-item" role="presentation">
+													    <a class="nav-link active" id="services2-tab-0" data-bs-toggle="tab" href="#services2-tabpanel-0" role="tab" aria-controls="services2-tabpanel-0" aria-selected="true">Design Services</a>
+													</li>
+												 	<li class="nav-item" role="presentation">
+												    	<a class="nav-link" id="services2-tab-1" data-bs-toggle="tab" href="#services2-tabpanel-1" role="tab" aria-controls="services2-tabpanel-1" aria-selected="false">Tools</a>
+												  </li>
+												</ul>
+												<div class="tab-content pt-5" id="tab-content">
+												  	<div class="tab-pane active" id="services2-tabpanel-0" role="tabpanel" aria-labelledby="services2-tab-0">
+													  	<div class="tech-stack-tabrow">
+											    			<div class="tech-stack-col">
+											    				<ul>								
+											    					<li>
+											    						<a href="#" class="ts-icon-text-link">
+												    						<div class="ts-icon"><img src="<?php echo bloginfo('template_url');?>/assets/images/services-icon/Build/Build Services/Backend Development.png" alt="#"> </div>
+												    						<div class="ts-text"><span>Backend Development</span></div>
+											    						</a>
+											    					</li>
+											    					<li>
+											    						<a href="#" class="ts-icon-text-link">
+												    						<div class="ts-icon"><img src="<?php echo bloginfo('template_url');?>/assets/images/services-icon/Build/Build Services/Cross Platform Apps.png" alt="#"> </div>
+												    						<div class="ts-text"><span>Cross Platform Apps</span></div>
+											    						</a>
+											    					</li>
+											    					<li>
+											    						<a href="#" class="ts-icon-text-link">
+												    						<div class="ts-icon"><img src="<?php echo bloginfo('template_url');?>/assets/images/services-icon/Build/Build Services/Data Analytics & Visualization.png" alt="#"> </div>
+												    						<div class="ts-text"><span>Data Analytics & Visualization</span></div>
+											    						</a>
+											    					</li>
+											    					<li>
+											    						<a href="#" class="ts-icon-text-link">
+												    						<div class="ts-icon"><img src="<?php echo bloginfo('template_url');?>/assets/images/services-icon/Build/Build Services/eCommerce & CMS Development.png" alt="#"> </div>
+												    						<div class="ts-text"><span>eCommerce & CMS Development</span></div>
+											    						</a>
+											    					</li>
+											    					<li>
+											    						<a href="#" class="ts-icon-text-link">
+												    						<div class="ts-icon"><img src="<?php echo bloginfo('template_url');?>/assets/images/services-icon/Build/Build Services/Frontend Development.png" alt="#"> </div>
+												    						<div class="ts-text"><span>Frontend Development</span></div>
+											    						</a>
+											    					</li>
+											    					<li>
+											    						<a href="#" class="ts-icon-text-link">
+												    						<div class="ts-icon"><img src="<?php echo bloginfo('template_url');?>/assets/images/services-icon/Build/Build Services/Microsoft Technologies.png" alt="#"> </div>
+												    						<div class="ts-text"><span>Microsoft Technologies</span></div>
+											    						</a>
+											    					</li>
+											    					<li>
+											    						<a href="#" class="ts-icon-text-link">
+												    						<div class="ts-icon"><img src="<?php echo bloginfo('template_url');?>/assets/images/services-icon/Build/Build Services/Mobile App Development.png" alt="#"> </div>
+												    						<div class="ts-text"><span>Mobile App Development</span></div>
+											    						</a>
+											    					</li>
+											    					<li>
+											    						<a href="#" class="ts-icon-text-link">
+												    						<div class="ts-icon"><img src="<?php echo bloginfo('template_url');?>/assets/images/services-icon/Build/Build Services/PHP Development.png" alt="#"> </div>
+												    						<div class="ts-text"><span>PHP Development</span></div>
+											    						</a>
+											    					</li>
+											    					<li>
+											    						<a href="#" class="ts-icon-text-link">
+												    						<div class="ts-icon"><img src="<?php echo bloginfo('template_url');?>/assets/images/services-icon/Build/Build Services/Trending Technologies.png" alt="#"> </div>
+												    						<div class="ts-text"><span>Trending Technologies</span></div>
+											    						</a>
+											    					</li>
+											    				</ul>
+											    			</div>
+											    		</div>
+												  	</div>
+												  	<div class="tab-pane" id="services2-tabpanel-1" role="tabpanel" aria-labelledby="services2-tab-1">
+														<div class="tech-stack-tabrow">
+											    			<div class="tech-stack-col">
+											    				<ul>										
+											    					<li>
+											    						<a href="#" class="ts-icon-text-link">
+												    						<div class="ts-icon"><img src="<?php echo bloginfo('template_url');?>/assets/images/services-icon/Build/Build tools/Android Studio.png" alt="#"> </div>
+												    						<div class="ts-text"><span>Android Studio</span></div>
+											    						</a>
+											    					</li>
+											    					<li>
+											    						<a href="#" class="ts-icon-text-link">
+												    						<div class="ts-icon"><img src="<?php echo bloginfo('template_url');?>/assets/images/services-icon/Build/Build tools/Apache.png" alt="#"> </div>
+												    						<div class="ts-text"><span>Apache</span></div>
+											    						</a>
+											    					</li>
+											    					<li>
+											    						<a href="#" class="ts-icon-text-link">
+												    						<div class="ts-icon"><img src="<?php echo bloginfo('template_url');?>/assets/images/services-icon/Build/Build tools/AWS.png" alt="#"> </div>
+												    						<div class="ts-text"><span>AWS</span></div>
+											    						</a>
+											    					</li>
+											    					<li>
+											    						<a href="#" class="ts-icon-text-link">
+												    						<div class="ts-icon"><img src="<?php echo bloginfo('template_url');?>/assets/images/services-icon/Build/Build tools/Eclipse.png" alt="#"> </div>
+												    						<div class="ts-text"><span>Eclipse</span></div>
+											    						</a>
+											    					</li>
+											    					<li>
+											    						<a href="#" class="ts-icon-text-link">
+												    						<div class="ts-icon"><img src="<?php echo bloginfo('template_url');?>/assets/images/services-icon/Build/Build tools/IntelliJ IDEA.png" alt="#"> </div>
+												    						<div class="ts-text"><span>IntelliJ IDEA</span></div>
+											    						</a>
+											    					</li>
+											    					<li>
+											    						<a href="#" class="ts-icon-text-link">
+												    						<div class="ts-icon"><img src="<?php echo bloginfo('template_url');?>/assets/images/services-icon/Build/Build tools/Postman.png" alt="#"> </div>
+												    						<div class="ts-text"><span>Postman</span></div>
+											    						</a>
+											    					</li>
+											    					<li>
+											    						<a href="#" class="ts-icon-text-link">
+												    						<div class="ts-icon"><img src="<?php echo bloginfo('template_url');?>/assets/images/services-icon/Build/Build tools/sublime-text.png" alt="#"> </div>
+												    						<div class="ts-text"><span>sublime-text</span></div>
+											    						</a>
+											    					</li>
+											    					<li>
+											    						<a href="#" class="ts-icon-text-link">
+												    						<div class="ts-icon"><img src="<?php echo bloginfo('template_url');?>/assets/images/services-icon/Build/Build tools/Visual Studio.png" alt="#"> </div>
+												    						<div class="ts-text"><span>Visual Studio</span></div>
+											    						</a>
+											    					</li>
+																	<li>
+											    						<a href="#" class="ts-icon-text-link">
+												    						<div class="ts-icon"><img src="<?php echo bloginfo('template_url');?>/assets/images/services-icon/Build/Build tools/XAMPP.png" alt="#"> </div>
+												    						<div class="ts-text"><span>XAMPP</span></div>
+											    						</a>
+											    					</li>
+																	<li>
+											    						<a href="#" class="ts-icon-text-link">
+												    						<div class="ts-icon"><img src="<?php echo bloginfo('template_url');?>/assets/images/services-icon/Build/Build tools/Xcode.png" alt="#"> </div>
+												    						<div class="ts-text"><span>Xcode</span></div>
+											    						</a>
+											    					</li>
+											    				</ul>
+											    			</div>
+											    		</div>
+												  	</div>
+												</div>
+									    	</div>					    	
+									    </div>
+									    <div class="tab-pane fade" id="v-pills-support" role="tabpanel" aria-labelledby="v-pills-support-tab">
+									    	<div class="ts-tab-content-main">
+									    		<ul class="nav nav-tabs" role="tablist">
+													<li class="nav-item" role="presentation">
+													    <a class="nav-link active" id="services3-tab-0" data-bs-toggle="tab" href="#services3-tabpanel-0" role="tab" aria-controls="services3-tabpanel-0" aria-selected="true">Design Services</a>
+													</li>
+												 	<li class="nav-item" role="presentation">
+												    	<a class="nav-link" id="services3-tab-1" data-bs-toggle="tab" href="#services3-tabpanel-1" role="tab" aria-controls="services3-tabpanel-1" aria-selected="false">Tools</a>
+												  </li>
+												</ul>
+												<div class="tab-content pt-5" id="tab-content">
+												  	<div class="tab-pane active" id="services3-tabpanel-0" role="tabpanel" aria-labelledby="services3-tab-0">
+													  	<div class="tech-stack-tabrow">
+											    			<div class="tech-stack-col">
+											    				<ul>															
+											    					<li>
+											    						<a href="#" class="ts-icon-text-link">
+												    						<div class="ts-icon"><img src="<?php echo bloginfo('template_url');?>/assets/images/services-icon/Support/Support Services/Digital Marketing.png" alt="#"> </div>
+												    						<div class="ts-text"><span>Digital Marketing</span></div>
+											    						</a>
+											    					</li>
+											    					<li>
+											    						<a href="#" class="ts-icon-text-link">
+												    						<div class="ts-icon"><img src="<?php echo bloginfo('template_url');?>/assets/images/services-icon/Support/Support Services/Maintenance and Support.png" alt="#"> </div>
+												    						<div class="ts-text"><span>Maintenance and Support</span></div>
+											    						</a>
+											    					</li>
+											    					<li>
+											    						<a href="#" class="ts-icon-text-link">
+												    						<div class="ts-icon"><img src="<?php echo bloginfo('template_url');?>/assets/images/services-icon/Support/Support Services/QA and Testing.png" alt="#"> </div>
+												    						<div class="ts-text"><span>QA and Testing</span></div>
+											    						</a>
+											    					</li>
+											    				</ul>
+											    			</div>
+											    		</div>
+												  	</div>
+												  	<div class="tab-pane" id="services3-tabpanel-1" role="tabpanel" aria-labelledby="services3-tab-1">
+														<div class="tech-stack-tabrow">
+											    			<div class="tech-stack-col">
+											    				<ul>															
+											    					<li>
+											    						<a href="#" class="ts-icon-text-link">
+												    						<div class="ts-icon"><img src="<?php echo bloginfo('template_url');?>/assets/images/services-icon/Support/Support Tools/pngwing.com (3) 1.png" alt="#"> </div>
+												    						<div class="ts-text"><span>Cucumber</span></div>
+											    						</a>
+											    					</li>
+											    					<li>
+											    						<a href="#" class="ts-icon-text-link">
+												    						<div class="ts-icon"><img src="<?php echo bloginfo('template_url');?>/assets/images/services-icon/Support/Support Tools/Postman.png" alt="#"> </div>
+												    						<div class="ts-text"><span>Postman</span></div>
+											    						</a>
+											    					</li>
+											    					<li>
+											    						<a href="#" class="ts-icon-text-link">
+												    						<div class="ts-icon"><img src="<?php echo bloginfo('template_url');?>/assets/images/services-icon/Support/Support Tools/selenium-svgrepo-com 1.png" alt="#"> </div>
+												    						<div class="ts-text"><span>Selenium</span></div>
+											    						</a>
+											    					</li>
+											    					<li>
+											    						<a href="#" class="ts-icon-text-link">
+												    						<div class="ts-icon"><img src="<?php echo bloginfo('template_url');?>/assets/images/services-icon/Support/Support Tools/UFt one.png" alt="#"> </div>
+												    						<div class="ts-text"><span>UFt one</span></div>
+											    						</a>
+											    					</li>
+											    				</ul>
+											    			</div>
+											    		</div>
+												  	</div>
+												</div>
+									    	</div>						    	
+									    </div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="service-bottom-text text-center mt-5">
+							<p class="mb-0">Discover talent with Expert Proficiency Across 100 Tech & Digital Skills</p>
+						</div>
+					</div>
 				</div>
 			</section>
 

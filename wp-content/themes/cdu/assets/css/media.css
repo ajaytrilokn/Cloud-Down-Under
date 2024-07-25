@@ -14,6 +14,19 @@
 
 .tech-stack-col ul .ts-icon-text-link .ts-text{font-size:18px;}
 .ts-icon{height:60px;max-width:65px;}
+
+.whyCduServices-img-box-main ul li{font-size:18px;line-height:30px;padding-left:40px;margin:10px 0px;}
+.whyCduServices-img-box-main ul li:before{width:30px;height:30px;}
+.whyCduServices-content{padding:20px 15px;}
+.whyCduServices-content .points-count-main{gap:30px;margin-top:30px;margin-bottom:60px;}
+
+ul.blog-categories li a{font-size:18px;}
+.blog--col .blog--title h4{font-size:18px;}
+.blog--date{margin-bottom:15px;}
+.blog--col .blog--img{margin-bottom:20px;height:200px;}
+
+.blog-left-col .blog-left-img {height: 400px; }
+.letest-blog-main .letest-blog-row {padding-bottom: 15px; margin-bottom: 15px; }
 			
 }
 
@@ -31,28 +44,73 @@
 	.letest-blog-main .letest-blog-row{padding-bottom:15px;margin-bottom:15px;}
 	.the-process__step-description p{font-size:20px;line-height:30px;}
 
-
-}
-
-@media (max-width: 1499px) { 
-
-.home-left-tabs .nav-pills .nav-link{font-size:20px;padding-right:20px;}
-.points-count-main .points-count-box p{font-size:16px;line-height:23px;}
-.points-count-main{margin-bottom:60px;}
-.why-cdu-video-main .play-link{width:100px;height:100px;}
-.testimonials-top-video .play-link{width:70px;height:70px;}
-.testimonials-person-info .t-person-info span.name{font-size:20px;margin-bottom:4px;line-height:1.2;}
-.testimonials-person-info .t-person-img{width:48px;height:48px;}
-.testimonials-person-info .t-person-info{width:calc(100% - 48px);padding-left:13px;}
-.blog-sec{padding:80px 0px 60px;}
-.blog-sec-main{margin-top:25px;}
-
 	
+	ul.team-point li{font-size:16px;line-height:30px;padding-left:40px;}
+	ul.team-point li:before{width:30px;height:30px;}
+	ul.team-point{padding:30px 0px;gap:18px;}
+	.team-person-testimonial{padding-top:30px;}
+
+	.client-says-main p {font-size: 32px; line-height: 1.4; }
+	.work-features-text p{font-size:18px;line-height:30px;}
+	.work-features-box .work-features-img{margin-bottom:25px;}
+	.client-says-main .quote-icon {margin-bottom: 40px; }
+	.client-info-main .client-info span.name {font-size: 30px; }
+	ul.work-d-text-points li{font-size:26px;}
+	ul.work-d-text-points{gap:15px;}
+	.work-d-ss-text-sec .work-d-ss-text-wrap{max-width:1100px;}
+	.work-d-ss-text-wrap .work-d-text p{font-size:22px;line-height:38px;}
+	.work-d-points-count .points-count-box h3{font-size:50px;}
+	.work-d-points-count .points-count-box p{font-size:18px;}
+	.work-d-info-row .work-d-info-p p {font-size: 22px; line-height: 35px; }
+
+	.filter-button-group .btn{padding:15px 25px;font-size:15px;text-transform:uppercase;min-width:auto;background:#EAEAEA;color:#000;border:none;flex:0 0 auto;box-shadow:none!important;}
+	.careers-left ul li{padding:12px 18px;border:1px solid #000;border-radius:40px;line-height:1;}
+
+
+	.blog--col .blog--img{height:180px;}
+	.blog-page-row .blog-page-lists{width:calc(100% - 300px);padding-left:30px;}
+	.blog-page-row .blog-categories-main{width:300px;}
+	.blog--date span{font-size:12px;}
+	.blog--col .blog--title h4{font-size:16px;}
+	.all-insights-row{gap:45px 14px;}
+	.all-insights-row .blog--col{width:calc(33.33% - 10px);}
+	ul.blog-categories li a{font-size:16px;}
+	.blog-page-sec h3.blog-sub-title{margin-bottom:30px;}
+	.blog-page-lists .blog-page-latest-blogs {margin-bottom: 40px; }
+
+	.blog-left-col .blog-left-img {height: 345px; }
+
 
 }
 
-
 @media (max-width: 1499px) { 
+
+	.home-left-tabs .nav-pills .nav-link{font-size:20px;padding-right:20px;}
+	.points-count-main .points-count-box p{font-size:16px;line-height:23px;}
+	.points-count-main{margin-bottom:60px;}
+	.why-cdu-video-main .play-link{width:100px;height:100px;}
+	.testimonials-top-video .play-link{width:70px;height:70px;}
+	.testimonials-person-info .t-person-info span.name{font-size:20px;margin-bottom:4px;line-height:1.2;}
+	.testimonials-person-info .t-person-img{width:48px;height:48px;}
+	.testimonials-person-info .t-person-info{width:calc(100% - 48px);padding-left:13px;}
+	.blog-sec{padding:80px 0px 60px;}
+	.blog-sec-main{margin-top:25px;}
+	.service-banner-points-wp ul li{font-size:16px;line-height:30px;padding-left:45px;margin:8px 0px;}
+	.service-banner-points-wp ul li:before{width:30px;height:30px;}
+	.allServices-row-main .allServices-left{width:330px;}
+	.allServices-row-main .allServices-right{width:calc(100% - 330px);padding-left:60px;}
+	.services-box-main{gap:25px;}
+	.services-box-main .services-box{width:calc(33.33% - 17px);padding-left:20px;position:relative;}
+	.services-box-main .services-box h4{font-size:17px;}
+	ul.using-tools{gap:40px 80px;}
+	ul.allServices-ul li a{font-size:15px;}
+	ul.allServices-ul{gap:17px;}
+	.allServices-left .cta-main .btn.btn-with-arrow{font-size:15px;}
+
+	.whyCduServices-img-box-main ul li {font-size: 16px; }
+	.work-banner-sec ul.banner-point li {font-size: 16px; padding-left: 40px; }
+
+
 
 	h1 { font-size:55px;}
 	h2 { font-size:40px;}
@@ -64,6 +122,7 @@
 
 	.btn{padding:15px 50px 16px 20px;font-size:14px;border-radius:35px;}
 	.btn-with-arrow:after{width:35px;height:35px;right:5px;}
+	.btn.btn-with-arrow:before{left:-50px;}
 	.our-work-slide-row{gap:15px;}
 	.our-work-bottom{padding:15px;}
 	.banner-rating-main{max-width:470px;margin-top:30px;margin-bottom:30px;}
@@ -107,7 +166,8 @@
 	ul.card-bullets li{font-size:13px;padding:6px 14px;border-radius:16px;border:1px solid #000;}
 	.card-text-main.journey-text h3{font-size:24px;}
 	.vision-mission-box{padding:25px 25px;border-radius:30px;margin:12px 0px;height:calc(100% - 24px);}
-
+	.see-more-blogs .blog--col .blog--img {height: 250px; }
+	.blog-left-col .blog-left-img {height: 300px; }
 
 }
 
@@ -116,6 +176,46 @@
 
 .trusted-companies-main .client-logo img{max-height:46px;max-width:170px;}
 .trusted-companies-main .client-logo{padding:25px 60px;}
+
+.service-banner-points-wp ul li:before {width: 26px; height: 26px; }
+.service-banner-points-wp ul li {line-height: 26px;}
+
+
+.whyCduServices-img-box-main ul li{font-size:15px;line-height:26px;}
+.whyCduServices-img-box-main ul li:before{width:26px;height:26px;}
+.whyCduServices-content ul.banner-point{margin-top:20px;}
+.whyCduServices-img-box-main{padding:20px;}
+.section-title .sec-title-small{font-size:18px;}
+ul.team-point li{font-size:15px;line-height:26px;}
+ul.team-point li:before{width:26px;height:26px;}
+
+
+.banner-sec.work-banner-sec {min-height: auto; }
+.portfolio-grid-item .portfolio-btn .btn{padding:11px 45px 11px 20px;}
+.portfolio-grid-item .portfolio-btn .btn.btn-with-arrow:before{left:-40px;}
+.portfolio-btn .btn::after{width:24px;height:24px;padding:0px;}
+.portfolio-logo .portfolio-logo-img{max-height:40px;}
+.portfolio-info-row{margin-bottom:15px;}
+
+.work-features-box .work-features-img img{max-height:55vh;}
+.work-features-slide .work-features-box{padding:30px 30px;}
+.work-features-text p{font-size:16px;line-height:26px;}
+.client-says-main p{font-size:26px;}
+.client-info-main .client-info-img{width:70px;height:70px;}
+.client-info-main .client-info{width:calc(100% - 70px);}
+.client-info-main .client-info span.name{font-size:24px;}
+.client-info-main .client-info span.name-position{font-size:16px;}
+
+.case-study-icon {max-width: 150px; }
+
+.career-banner ul.banner-point{gap:15px 20px;margin:25px 0px 55px;}
+.career-banner .service-banner-points-wp ul li{width:calc(33.33% - 14px);padding-left:35px;}
+.testimonials-top .testimonials-top-text .quote-icon i.fa{margin-bottom:20px;}
+.career-banner .service-banner-points-wp ul li {font-size: 15px; }
+
+.see-more-blogs .blog--col .blog--img {height: 220px; }
+.letest-blog-main .letest-blog-row{padding-bottom:10px;margin-bottom:10px;}
+.blog-left-col .blog-left-img{height:270px;}
 
 }
 
@@ -130,6 +230,22 @@ h1 { font-size:50px;}
 
 .tc-logos-main{padding:60px 0px;}
 .tech-stack-col ul li {width: calc(25% - 16px); }
+
+.services-header h3{margin-bottom:12px;}
+.services-header span.s-title-small{margin-bottom:5px;}
+.services-header{padding-bottom:20px;margin-bottom:40px;}
+.services-box-main .services-box{width:calc(50% - 13px);padding-left:20px;position:relative;}
+.using-tools-main{margin-top:40px;}
+.allServices-nameBox h3{font-size:20px;}
+ul.using-tools{gap:30px 60px;}
+.career-banner .service-banner-points-wp ul li {width: calc(50% - 10px); }
+
+.blog--col .blog--img{height:150px;}
+.blog--col .blog--title h4{font-size:15px;}
+.blog--date span{font-size:10px;}
+.blog-page-row .blog-page-lists{padding-left:10px;}
+
+
 
 
 }
@@ -159,6 +275,7 @@ h1 { font-size:50px;}
 	.our-work-right-top .service-type ul{flex-direction:row;}
 	.our-work-bottom{margin-top:30px;}
 	.btn{padding:12px 45px 13px 15px;font-size:14px;border-radius:20px;}
+	.btn.btn-with-arrow:before{left:-45px;}
 	.btn-with-arrow:after{width:28px;height:28px;background-size:15px!important;}
 
 
@@ -174,6 +291,41 @@ h1 { font-size:50px;}
 	.our-values-row .our-values-col:first-child{width:100%;}
 	.our-values-row .our-values-col{width:calc(50% - 10px);}
 	.our-values-sec .our-values-top {margin-bottom: 40px; }
+
+	.awards-sec .awards-top {margin-bottom: 60px; }
+
+	.banner-v-img img{max-height:none;}
+	.banner-v-img{max-width:800px;margin:0px auto;}
+	.why-cdu-video-main{max-width:550px;margin:40px auto 0px;}
+
+	.work-banner-sec ul.banner-point li{font-size:15px;width:100%;}
+	.portfolio-grid{gap:6px;}
+	.portfolio-grid.col-two{padding:7px;}
+	.portfolio-grid.col-two .portfolio-grid-item{width:calc(50% - 3px);}
+	.work-banner-sec .service-banner-points-wp{padding:30px 0px 50px;}
+	.portfolio-grid-item .portfolio-item-info{width:93%;}
+
+	.work-banner-sec ul.banner-point {gap: 0px; }
+	ul.case--study-type-inner li a {padding: 4px 10px; }
+	.portfolio-grid-item .portfolio-img {min-height: 350px; object-fit: cover; object-position: bottom; }
+
+	.filter-button-group .btn{padding:13px 20px;font-size:14px;}
+	.careers-left ul li{padding:10px 15px;font-size:14px;}
+
+	.career-banner .service-banner-points-wp ul li {width: calc(30% - 10px); }
+
+	.blog-page-sec h3.blog-sub-title{font-size:24px;margin-bottom:25px;}
+	ul.blog-categories li a{font-size:14px;}
+	ul.blog-categories{gap:10px;}
+	.blog-page-row .blog-categories-main{width:250px;}
+	.blog-page-row .blog-page-lists{width:calc(100% - 250px);}
+
+
+	.blog-header-img{margin-top:40px;}
+	.blog-details-sec{padding:30px 0px;}
+	.blog-details-b-sec .banner-text-wrap{margin-bottom:0px;}
+	.see-more-blogs .blog--col .blog--img{height:180px;}
+	.blog-left-col .blog-left-img {height: 240px; }
 
 }	
 
@@ -221,10 +373,72 @@ h1 { font-size:50px;}
 	.team-person-info .name {font-size: 18px; }
 
 	.btn {padding: 12px 40px 13px 15px; font-size: 13px; border-radius: 20px; }
-
+	.btn.btn-with-arrow:before{left:-40px;}
 	.about-banner-sec .banner-btn-main{margin:35px 0px 30px;}
 	.about-bbi-sec{padding:10px 0px 20px;}
 	.a_banner_bottom_img img{border-radius:10px;}
+
+	.awards-left-top{margin-bottom:0px;}
+	.awards-sec .btn-wrap{justify-content:end;padding-bottom: 40px;}
+	.awards-bottom{padding-bottom: 0px;}
+	.awards-sec .awards-top {margin-bottom: 25px; }
+	.awards-left-bottom p.awards-text{font-size: 14px;}
+	.awards-left-top h2{font-size:24px;line-height:1.2;}
+	.awards-left-top h3{font-size:18px;}
+
+	.services-box-main{gap:20px;}
+	ul.using-tools li .icon{width:35px;height:35px;}
+	ul.using-tools li .icon-name{width:calc(100% - 35px);padding-left:10px;font-size:14px;}
+	ul.using-tools{gap:20px 40px;}
+	.allServices-row-main .allServices-left{width:290px;}
+	.allServices-nameBox{padding:25px 15px;}
+	.allServices-row-main .allServices-right{width:calc(100% - 290px);padding-left:25px;}
+	.using-tools-main h4{font-size:18px;margin-bottom:20px;}
+	.services-box-main .services-box h4{font-size:16px;}
+	.services-box-main .services-box p{font-size:12px;line-height:20px;}
+	.services-box-main .services-box{width:calc(50% - 10px);padding-left:15px;position:relative;}
+	ul.allServices-ul li a:after{right:-14px;}
+	ul.allServices-ul li a{font-size:14px;}
+	.allServices-left .cta-main .btn.btn-with-arrow{font-size:14px;}
+
+	.whyCduServices-content .points-count-main .points-count-box p{font-size:10px;}
+	.whyCduServices-content .points-count-main .points-count-box h3{font-size:15px;}
+	.whyCduServices-content .points-count-main{flex-wrap:nowrap;}
+
+
+	ul.case--study-type-inner{gap:7px;}
+	.portfolio-grid-item .portfolio-btn .btn{padding:9px 30px 9px 12px;}
+	.portfolio-btn .btn::after{width:20px;height:20px;padding:0px;right:3px;}
+	.portfolio-logo .portfolio-logo-img{max-height:30px;}
+	.portfolio-info-row{margin-bottom:10px;}
+	.portfolio-grid-item .portfolio-item-info{top:0px;}
+
+	.work-banner-sub-text p{font-size:20px;line-height:28px;}
+	.work-details-img-sec{padding:60px 0px;}
+	.work-d-ss-text-top{padding:60px 0px;}
+	ul.work-d-text-points{padding-left:20px;}
+	ul.work-d-text-points li{font-size:18px;}
+	.work-d-ss-text-wrap .work-d-text p{font-size:17px;line-height:30px;}
+	.work-d-points-count .points-count-box h3{font-size:36px;}
+	.work-d-points-count .points-count-box p{font-size:14px;line-height:24px;}
+	.work-d-points-count{gap:30px;}
+	.work-d-info-row .work-d-info-p p{font-size:18px;line-height:30px;}
+	.work-d-info .work-d-info-row{padding:40px 0px;}
+	.work-d-info-main{padding:20px 0px;}
+	.client-says-main p{font-size:20px;line-height:34px;}
+
+	.testimonials-slider .slick-track .testimonials-slide {padding-right: 15px; }
+
+	.blog-page-row .blog-categories-main{width:100%;position:unset;position:unset;margin-bottom:30px;}
+	.blog-page-row .blog-page-lists{width:100%; padding-left: 0px;}
+
+	.about-cdu-logo svg{width:130px;}
+	.about-cdu-box p{font-size:14px;line-height:22px;margin-bottom:20px;}
+	.about-cdu-box h3{font-size:20px;}
+	ul.social-link-wp a svg{width:40px;height:40px;}
+	.blog-details-row .about-cdu-left{width:285px;}
+	.learn-more-link{font-size:14px;}
+	.blog-details-row .blog-details-main{width:calc(100% - 285px);padding-left:25px;}
 
 
 }
@@ -322,7 +536,72 @@ h1 { font-size:50px;}
 	.team-section button.slick-next.slick-arrow{right:-15px;}
 	.team-section button.slick-arrow{top:43%;}
 
-	
+	.dedicated-team-img {margin-top: 50px; }
+	.allServices-row-main .allServices-left{display:none;}
+	.allServices-row-main .allServices-right{width:100%; padding-left: 0px;}
+
+	.whyCduServices-content h3 {font-size: 16px; }
+
+	.services-box-main .services-box{width:100%;}
+	.cdu-services-sec .cdu-services-top{margin-bottom:30px;}
+	.whyCduServices-img-box-main{border-radius:18px;padding:15px;}
+	.whyCduServices-content{padding:10px 0px;}
+	.section-title .sec-title-small{font-size:16px;}
+
+	.portfolio-grid.col-two .portfolio-grid-item {width: 100%; }
+
+	.portfolio-grid-item .portfolio-item-info{width:100%;top:0px;}
+	ul.case--study-type-inner li a{font-size:6px;}
+	.portfolio-grid-item .portfolio-img{min-height:300px;}
+	.portfolio-btn .btn::after{width:13px;height:13px;padding:0px;background-size:9px!important;}
+	.portfolio-grid-item .portfolio-btn .btn{padding:7px 25px 7px 10px;font-size:6px;}
+
+	.work-features-sec button.slick-prev.slick-arrow {left: unset; }
+	ul.work-d-text-points{padding-left:0px;}
+	.work-d-info .work-d-info-row h3.font-we-sb{margin-bottom:25px;}
+	.work-details-banner .banner-text-wrap{padding:0px;}
+	.case-study-icon{max-width:90px;margin-left:-10px;}
+	.work-d-info-row .work-d-info-p p{font-size:16px;line-height:28px;}
+	.work-features-slider .work-features-slide{padding-right:15px;}
+	.work-features-slide .work-features-box{padding:25px;}
+	.client-says-main p{font-size:16px;line-height:30px;}
+	.client-says-main .quote-icon{margin-bottom:20px;}
+	.client-info-main .client-info-img{width:50px;height:50px;}
+	.client-info-main .client-info{width:calc(100% - 50px);}
+	.client-info-main .client-info span.name{font-size:18px;}
+	.client-info-main .client-info span.name-position{font-size:14px;}
+	.client-info-main{margin-top:25px;}
+	.quote-icon i.fa{font-size:45px;}
+	.client-testimonials-main{padding:60px 0px;}
+
+	.work-details-img{margin-left:-15px;margin-right:-5px;}
+	.work-details-img-sec{padding:40px 0px;}
+	.work-d-points-count{flex-wrap:wrap;flex-direction:column;gap:11px;}
+
+	.work-features-sec button.slick-next.slick-arrow{right:calc(13%);}
+	.work-features-sec button.slick-prev.slick-arrow{right:calc(13% + 45px);}
+	 .banner-links-main ul li.banner-links a {font-size: 15px; }+
+
+	.career-banner .service-banner-points-wp ul li{width:100%;}
+	.career-banner ul.banner-point{gap:5px 10px;}
+	.filter-button-group .btn{padding:10px 15px;font-size:13px;}
+	.filter-button-group{gap:10px;}
+	.careers-row{padding:35px 0px;}
+	.careers-row .careers-left p{margin-bottom:20px;}
+	.careers-left ul li{font-size:13px;padding:9px 12px;}
+	.careers-row {flex-wrap: wrap; flex-direction: column; gap: 30px; }
+	.cdu-careers-sec{padding:40px 0px;}
+	.testimonials-slider .slick-track .testimonials-slide{padding-right:10px;}
+	.career-banner .service-banner-points-wp ul li{width:100%;}
+
+	.all-insights-row .blog--col{width:calc(50% - 7px);}
+	.blog--col .blog--img{height:180px;}
+
+	.blog-details-row .about-cdu-left{width:100%;position:unset;}
+	.blog-details-row .blog-details-main{width:100%;padding-left:0px;}
+	.blog-details-row{flex-direction:column-reverse;}
+	.blog-details-sec{padding-top:10px;}
+	.blog-left-col .blog-left-img{height: auto;}
 }
 
 /*=========================================================
@@ -332,6 +611,11 @@ Extra small devices (portrait phones, less than 576px)
 
 	.container{ width: 100%; padding-left:20px; padding-right:20px; }
 
+	.all-insights-row .blog--col{width:100%;}
+	.blog--col .blog--img{height:auto;}
+	.all-insights-row{gap:25px;}
+	.blog--date{margin-bottom:8px;}
+	.blog--col .blog--title h4 {font-size: 16px; }
 	
 
 }

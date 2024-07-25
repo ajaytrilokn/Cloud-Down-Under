@@ -89,8 +89,69 @@ $videoPlay = get_field('video_play_btn_image','option');
 				<div class="container">
 					<div class="cdu-services-top">
 						<div class="section-title">
-							<span class="sec-title-small">CDU Services</span>
-							<h2 class="text-uppercase">Tailored Development Services</h2>
+							<span class="sec-title-small"><?php echo the_field('service_small_title');?></span>
+							<h2 class="text-uppercase"><?php echo the_field('service_uppercase_title');?></h2>
+						</div>
+					</div>
+					<div class="allServices-main">
+						<div class="allServices-row-main">
+							<?php if(have_rows('service_content')):?>
+							<div class="allServices-left">
+							<div class="allServices-nameBox">	
+												
+									<h3><?php echo the_field('service_left_title');?></h3>
+									<ul class="allServices-ul">
+									    <?php
+										$s = 0;
+										while(have_rows('service_content')):the_row();
+										?>	
+										<li>
+											<a href="#<?php echo $s;?>" class="scrollTosection <?php echo $s==0?'active':'';?>"><?php echo get_sub_field('all_services_title');?></a>
+										</li>
+										<?php $s++;endwhile;?>
+									</ul>
+									<div class="cta-main">
+			                        	<a href="#" class="btn btn-with-arrow">Discuss your project</a>
+			                        </div>
+		                        </div>
+							</div>
+							<div class="allServices-right">
+								<div class="allServices-content">
+								<?php
+								$s = 0;
+								while(have_rows('service_content')):the_row();?>
+									<div class="allServices-row" id="<?php echo $s;?>">
+										<div class="services-header">
+											<?php echo get_sub_field('service_right_header');?>
+										</div>
+										<div class="services-body">
+											<div class="services-box-main">
+												<?php if(have_rows('service_boxes')):while(have_rows('service_boxes')):the_row();?>
+												<div class="services-box">
+													<h4><?php echo get_sub_field('service_box_title');?></h4>
+													<p><?php echo get_sub_field('service_box_text');?></p>
+												</div>
+												<?php endwhile;endif;?>
+											</div>
+										</div>
+										<div class="using-tools-main">
+											<h4><?php echo get_sub_field('tools_title');?></h4>
+											<ul class="using-tools">
+												<?php if(have_rows('service_tools')):while(have_rows('service_tools')):the_row();
+												$serviceTool = get_sub_field('service_tool_img');
+												?>
+												<li>
+													<div class="icon"><img src="<?php echo $serviceTool['url'];?>" alt="<?php echo $serviceTool['alt'];?>"></div>
+													<span class="icon-name"><?php echo get_sub_field('service_tool_name');?></span>
+												</li>
+												<?php endwhile;endif;?>
+											</ul>
+										</div>
+									</div>
+									<?php $s++; endwhile;?>
+								</div>
+							</div>
+							<?php endif;?>
 						</div>
 					</div>
 				</div>
@@ -167,25 +228,48 @@ $videoPlay = get_field('video_play_btn_image','option');
 				</div>
 			</section>
 
-			<section class="services-sec theme-bg-color">
+			<section class="why-cdu-sec whyCduServices-page theme-bg-color">
 				<div class="container">
-					<div class="services-top">
+					<div class="why-cdu-top">
+						<div class="section-title">
+							<span class="sec-title-small"><?php echo the_field('why_title_small');?></span>
+							<h2 class="text-uppercase"><?php echo the_field('why_uppercase_title');?></h2>
+						</div>
+					</div>
+					<div class="whyCduServices-img-box-main">
 						<div class="row">
-							<div class="col-lg-6 col-md-6 col-sm-12 col-12">
-								<div class="section-title">
-									<span class="sec-title-small">What We Do </span>
-									<h2 class="text-uppercase">Our Services</h2>
-									
+							<div class="col-xl-6 col-lg-12 col-md-12 col-12">
+								<div class="whyCduServices-content">
+									<?php echo the_field('why_cdu_content');?>
+									<ul class="banner-point">
+										<?php if(have_rows('banner_points2')):while(have_rows('banner_points2')):the_row();?>
+					                    <li><?php echo get_sub_field('point');?></li>
+										<?php endwhile;endif;?>
+					                </ul>
+					                <div class="points-count-main">
+										<?php if(have_rows('point_count_box')):while(have_rows('point_count_box')):the_row();?>
+										<div class="points-count-box">
+											<h3 class=""><?php echo get_sub_field('count');?></h3>
+											<p><?php echo get_sub_field('text');?></p>
+										</div>
+									   <?php endwhile;endif;?>
+									</div>
+									<div class="cta-main">
+										<a href="<?php echo the_field('discuss_project_btn_url','option');?>" class="btn btn-with-arrow"><?php echo the_field('discuss_project_btn','option');?></a>
+									</div>
 								</div>
 							</div>
-							<div class="col-lg-6 col-md-6 col-sm-12 col-12 text-end align-self-center">
-								<div class="cta-main">
-									<a href="#" class="btn btn-with-arrow">Discuss your project</a>
+							<div class="col-xl-6 col-lg-12 col-md-12 col-12">
+								<div class="why-cdu-sec-video">
+									<div class="why-cdu-video-main">
+										<?php $whychooseImg = get_field('why_cdu_image');?>
+										<img src="<?php echo $whychooseImg['url'];?>" alt="<?php echo $whychooseImg['alt'];?>">
+										<a href="<?php echo the_field('why_choose_video_url');?>" data-fancybox class="play-link"><img src="<?php echo $videoPlay['url'];?>" alt="<?php echo $videoPlay['alt'];?>"></a>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					
 				</div>
 			</section>
 
@@ -193,7 +277,7 @@ $videoPlay = get_field('video_play_btn_image','option');
 				<div class="container">
 					<div class="process-top">
 						<div class="row">
-							<div class="col-lg-8 col-md-8 col-sm-12 col-12">
+							<div class="col-lg-12 col-md-12 col-sm-12 col-12">
 								<div class="section-title">
 									<span class="sec-title-small white_text"><?php echo the_field('process_small_title','option');?></span>
 									<h2 class="text-uppercase white_text"><?php echo the_field('process_title_uppercase','option');?></h2>
@@ -219,7 +303,7 @@ $videoPlay = get_field('video_play_btn_image','option');
               			<article class="the-process__step" data-is-active data-is-toggled="true" data-step>
 			                <div class="the-process__step-circle">
 				                <svg height="48" width="48" class="the-process__step-circle-anim">
-				                    <circle class="circle" cx="50%" cy="50%" r="50%" stroke="#40eb98" stroke-width="1" fill-opacity="0" />
+				                    <circle class="circle" cx="50%" cy="50%" r="50%" stroke="#fcbc13" stroke-width="1" fill-opacity="0" />
 				                </svg>
 				                <a href="#discovery" data-step-link><?php echo get_sub_field('steps','option');?></a>
 			                </div>
@@ -249,41 +333,61 @@ $videoPlay = get_field('video_play_btn_image','option');
 			</div>
 		    </section> 		
 
-			<section class="why-cdu-sec">
+			<section class="dedicated-team-sec">
 				<div class="container">
-					<div class="why-cdu-top">
+					<div class="dedicated-team-top">
 						<div class="section-title">
-							<span class="sec-title-small">Why CDU</span>
-							<h2 class="text-uppercase">Why choose CDU For  Development</h2>
+							<?php echo the_field('dedicated_team_title');?>
 						</div>
 					</div>
-					<div class="points-count-main">
-						<div class="points-count-box">
-							<h3 class="">12+</h3>
-							<p>years of experience,</p>
-						</div>
-						<div class="points-count-box">
-							<h3 class="">50+</h3>
-							<p>Experienced & Delivered In 50+ Industries.</p>
-						</div>
-						<div class="points-count-box">
-							<h3 class="">300+ </h3>
-							<p>More than 300 successfully implemented projects</p>
-						</div>
-					</div>
-				</div>
-
-				
-
-
-				<div class="video-why-cdu-wrap">
-					<div class="container">
-						<div class="why-cdu-sec-video">
-							<div class="why-cdu-video-main">
-								<img src="assets/images/why-cdu-video.png" alt="#">
-								<a href="assets/video/dummy_video.mp4" data-fancybox class="play-link"><img src="assets/images/play-icon.svg" alt="#"></a>
+					<div class="dedicated-team-content">
+						<div class="row">
+							<div class="col-lg-6 col-md-6 col-sm-12 col-12">
+								<div class="team-content-main">
+									<ul class="team-point">
+										<?php if(have_rows('team_points')):while(have_rows('team_points')):the_row();?>
+					                    <li><?php echo get_sub_field('team_point');?></li>
+										<?php endwhile;endif;?>
+					                </ul>
+					                <div class="team-person-testimonial">
+					                	<div class="team-person-main">
+						                	<div class="rating-main d-flex gap-2">
+						                		<span><i class="fa fa-star" aria-hidden="true"></i></span>
+						                		<span><i class="fa fa-star" aria-hidden="true"></i></span>
+						                		<span><i class="fa fa-star" aria-hidden="true"></i></span>
+						                		<span><i class="fa fa-star" aria-hidden="true"></i></span>
+						                		<span><i class="fa fa-star" aria-hidden="true"></i></span>
+						                	</div>
+						                	<p><?php echo the_field('team_person_text');?></p>
+						                	<div class="tp-info">
+						                		<div class="tp-info-img">
+													<?php $pImg = get_field('team_person_image');?>
+						                			<img src="<?php echo $pImg['url'];?>" alt="<?php echo $pImg['alt'];?>">
+						                		</div>
+						                		<div class="tp-info-text">
+						                			<?php echo the_field('tp_info');?>
+						                		</div>
+						                	</div>
+					                	</div>
+					                	<div class="d-flex flex-wrap gap-3">
+											<div class="btn-wp">
+					                        	<a href="<?php echo the_field('dedicated_btn_url');?>" class="btn btn-with-arrow "><?php echo the_field('hire_dedicated_btn_text');?></a>
+					                        </div>
+					                        <div class="btn-wp">	
+												<a href="<?php echo the_field('discuss_project_btn_url','option');?>" class="btn btn-with-arrow border-btn"><?php echo the_field('discuss_project_btn','option');?></a>
+					                        </div>
+										</div>
+					                </div>
+								</div>
+								
+							</div>
+							<div class="col-lg-6 col-md-6 col-sm-12 col-12">
+								<div class="dedicated-team-img">
+									<img src="<?php $dedicatedImg = get_field('dedicated_team_right_image'); echo $dedicatedImg['url'];?>" alt="<?php echo $dedicatedImg['alt'];?>">
+								</div>
 							</div>
 						</div>
+						
 					</div>
 				</div>
 			</section>
@@ -451,7 +555,9 @@ $videoPlay = get_field('video_play_btn_image','option');
 				</div>
 			</section>
 
-
+			<?php echo do_shortcode('[custom_contact_us_section]') ;?>
+			
+			
 <?php
 
 get_footer();
