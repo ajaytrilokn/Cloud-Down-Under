@@ -3,8 +3,6 @@
 get_header();
 
 ?>
-
-
 <section class="banner-sec about-banner-sec theme-bg-color banner-height-auto">
     <div class="banner-wrap  ">
         <div class="container">
