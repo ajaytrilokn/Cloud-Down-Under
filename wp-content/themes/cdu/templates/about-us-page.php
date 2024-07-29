@@ -12,11 +12,7 @@ $bannerbottomImg = get_field('banner_bottom_img');
 				<div class="banner-wrap  ">
 					<div class="container">
 						<div class="banner-links-main">
-							<ul>
-								<li class="banner-links"><a href="#">Home</a></li>
-								<li class="banner-links"><span>/</span></li>
-								<li class="banner-links active"><a href="#">About Us</a></li>
-							</ul>
+						<?php if (function_exists('custom_page_breadcrumbs')) custom_page_breadcrumbs(); ?>
 						</div>
 						<div class="row">
 							<div class="col-xl-7 col-lg-6 col-md-12 col-sm-12 col-12">	

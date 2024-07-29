@@ -14,11 +14,7 @@ $videoPlay = get_field('video_play_btn_image','option');
 								<div class="banner-text-wrap ">
 									<div class="banner-text">
 										<div class="banner-links-main">
-											<ul>
-												<li class="banner-links"><a href="#">Home</a></li>
-												<li class="banner-links"><span>/</span></li>
-												<li class="banner-links active"><a href="#">Work</a></li>
-											</ul>
+										<?php if (function_exists('custom_page_breadcrumbs')) custom_page_breadcrumbs(); ?>
 										</div>
 										<div class="banner-heading-wrap">
 											<?php echo the_field('work_banner_heading');?>

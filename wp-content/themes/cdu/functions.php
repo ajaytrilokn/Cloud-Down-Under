@@ -183,5 +183,59 @@ function custom_reading_time() {
     echo $reading_time . ' Min';
 }
 
+// Custom Breadcrumb
+function custom_page_breadcrumbs() {
+    // Settings
+    $separator = ' / ';
+    $home_title = 'Home';
+    
+    // Get the current page ID
+    global $post;
+    
+    // Start the breadcrumb
+    echo '<ul class="breadcrumb">';
+    
+    // Home link
+    echo '<li class="banner-links"><a href="' . home_url() . '">' . $home_title . ' /</a></li>';
+    
+    if (is_page()) {
+        // If on a page
+        
+        // Display parent pages
+        if ($post->post_parent) {
+            $ancestors = array_reverse(get_post_ancestors($post->ID));
+            foreach ($ancestors as $ancestor) {
+                echo '<li class="banner-links"><a href="' . get_permalink($ancestor) . '">' . get_the_title($ancestor) . '</a></li>';
+                echo '<li class="banner-links"><span>' . $separator . '</span></li>';
+            }
+        }
+        
+        // Display the current page
+        echo '<li class="banner-links active"><a href="#">' . get_the_title() . '</a></li>';
+    }
+    elseif (is_single()) {
+        // If on a single postt
+        
+        // Display the category hierarchy
+        $categories = get_the_category();
+        if (!empty($categories)) {
+            $category = $categories[0]; // Take the first category
+            $ancestors = array_reverse(get_ancestors($category->term_id, 'category'));
+            foreach ($ancestors as $ancestor) {
+                $ancestor_cat = get_category($ancestor);
+                echo '<li class="banner-links"><a href="' . get_category_link($ancestor_cat->term_id) . '">' . $ancestor_cat->name . '</a></li>';
+                echo '<li class="banner-links"><span>' . $separator . '</span></li>';
+            }
+            echo '<li class="banner-links"><a href="' . get_category_link($category->term_id) . '">' . $category->name . '</a></li>';
+            echo '<li class="banner-links"><span>' . $separator . '</span></li>';
+        }
+        
+        // Display the current post
+        echo '<li class="banner-links active">' . get_the_title() . '</li>';
+    }
+    echo '</ul>';
+}
+
+
 
 ?>

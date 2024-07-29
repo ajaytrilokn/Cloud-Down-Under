@@ -6,13 +6,7 @@ get_header();
 				<div class="banner-wrap  ">
 					<div class="container">
 						<div class="banner-links-main">
-							<ul>
-								<li class="banner-links"><a href="#">Home</a></li>
-								<li class="banner-links"><span>/</span></li>
-								<li class="banner-links"><a href="#">Insights</a></li>
-								<li class="banner-links"><span>/</span></li>
-								<li class="banner-links active"><a href="#">Details</a></li>
-							</ul>
+						<?php if (function_exists('custom_page_breadcrumbs')) custom_page_breadcrumbs(); ?>
 						</div>
 						<div class="blog-header-row">
 							<div class="banner-text-wrap ">

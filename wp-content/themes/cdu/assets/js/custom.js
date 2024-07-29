@@ -461,7 +461,7 @@ $(document).ready(function() {
     $(document).on("scroll", onScroll);
 
     //smoothscroll
-    $('a[href^="#"]').on('click', function(e) {
+    $('.allServices-ul li a.scrollTosection[href^="#"]').on('click', function(e) {
         e.preventDefault();
         $(document).off("scroll");
 
@@ -507,22 +507,58 @@ $(document).ready(function() {
 //        Categories Select Options JS START
 // ================================================================== 
 
+// Select the menu element
 const menu = document.querySelector(".select-menu");
-const [selectBtn, sBtnText] = [
-    menu.querySelector(".select-btn"),
-    menu.querySelector(".sBtn-text")
-];
 
-selectBtn.onclick = () => menu.classList.toggle("active");
+if (menu) {
+    // Select the button and text elements within the menu
+    const selectBtn = menu.querySelector(".select-btn");
+    const sBtnText = menu.querySelector(".sBtn-text");
 
-menu.querySelectorAll(".option").forEach((option) => {
-    option.onclick = () => {
-        sBtnText.innerText = option.querySelector(".option-text").innerText;
-        menu.classList.remove("active");
-    };
-});
+    if (selectBtn && sBtnText) {
+        // Add click event listener to the select button
+        selectBtn.onclick = () => menu.classList.toggle("active");
+
+        // Add click event listeners to all options
+        const options = menu.querySelectorAll(".option");
+        options.forEach((option) => {
+            const optionText = option.querySelector(".option-text");
+            if (optionText) {
+                option.onclick = () => {
+                    sBtnText.innerText = optionText.innerText;
+                    menu.classList.remove("active");
+                };
+            }
+        });
+    } // else {
+    //     console.error("Select button or button text element not found.");
+    // }
+}; // else {
+//     console.error("Menu element not found.");
+// }
+
+// ===========================================================    
+
+// const menu = document.querySelector(".select-menu");
+// const [selectBtn, sBtnText] = [
+//     menu.querySelector(".select-btn"),
+//     menu.querySelector(".sBtn-text")
+// ];
+
+
+// selectBtn.onclick = () => menu.classList.toggle("active");
+
+// menu.querySelectorAll(".option").forEach((option) => {
+//     option.onclick = () => {
+//         sBtnText.innerText = option.querySelector(".option-text").innerText;
+//         menu.classList.remove("active");
+//     };
+// });
+
+
+
+
 
 // ==================================================================
 //        Categories Select Options JS END
 // ================================================================== 
-
